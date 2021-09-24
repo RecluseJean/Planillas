@@ -6,7 +6,8 @@ import { LoginComponent } from './login/login.component';
 
 
 const routes: Routes = [
-
+  
+  { path: '', component: InicioComponent, data: { title: 'Perfil – Planillas' } },
   { path: 'inicio', component: InicioComponent, data: { title: 'Perfil – Planillas' } },
   { path: 'login', component: LoginComponent, data: { title: 'Signin – Planillas' } },
 

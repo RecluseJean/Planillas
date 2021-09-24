@@ -68,10 +68,17 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
+<<<<<<< Updated upstream
               "browserTarget": "planilla:build:production"
             },
             "development": {
               "browserTarget": "planilla:build:development"
+=======
+              "browserTarget": "Planillas:build:production"
+            },
+            "development": {
+              "browserTarget": "Planillas:build:development"
+>>>>>>> Stashed changes
             }
           },
           "defaultConfiguration": "development"
@@ -79,7 +86,11 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
+<<<<<<< Updated upstream
             "browserTarget": "planilla:build"
+=======
+            "browserTarget": "Planillas:build"
+>>>>>>> Stashed changes
           }
         },
         "test": {
@@ -102,5 +113,9 @@
       }
     }
   },
+<<<<<<< Updated upstream
   "defaultProject": "planilla"
+=======
+  "defaultProject": "Planillas"
+>>>>>>> Stashed changes
 }

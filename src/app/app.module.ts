@@ -3,22 +3,28 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { InicioModule } from './inicio/inicio.module';
-import { LoginModule } from './login/login.module';
-import { ModulosModule } from './modulos/modulos.module';
 
+//Signin
+import { SignInModule } from './pages/sign-in/sign-in.module';
+
+import { ComponentsModule } from './pages/components/components.module';
+
+//Dashboard
+import { DashboardModule } from './pages/dashboard/dashboard.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-   
+       
   ],
   imports: [
     BrowserModule,
+    SignInModule,
+    DashboardModule,
     AppRoutingModule,
-    InicioModule,
-    LoginModule,
-    ModulosModule
+
+    ComponentsModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

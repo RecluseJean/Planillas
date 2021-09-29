@@ -4,11 +4,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+//Componentes
+import { ComponentsModule } from './pages/components/components.module';
 //Signin
 import { SignInModule } from './pages/sign-in/sign-in.module';
-
-import { ComponentsModule } from './pages/components/components.module';
-
 //Dashboard
 import { DashboardModule } from './pages/dashboard/dashboard.module';
 

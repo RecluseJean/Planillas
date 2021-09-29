@@ -40,11 +40,18 @@ import { GenerarPlanillaComponent } from './planillas/generar-planilla/generar-p
 import { GestionVacacionesComponent } from './planillas/gestion-vacaciones/gestion-vacaciones.component';
 import { PrestamoComponent } from './planillas/prestamo/prestamo.component';
 
-
 const routesDash : Routes = [
   {
     path: 'dashboard', component: DashboardComponent,
     children: [
+      { path: '', redirectTo: 'administracion', pathMatch: 'full' },  
+      { path: 'administracion', redirectTo: 'administracion', pathMatch: 'full' },  
+      { path: 'configuracion', redirectTo: 'configuracion/escalones-quinta', pathMatch: 'full' }, 
+      { path: 'contabilidad', redirectTo: 'contabilidad/concepto-cuentas', pathMatch: 'full' }, 
+      { path: 'empleado', redirectTo: 'empleado/solicitud', pathMatch: 'full' },  
+      { path: 'equipo', redirectTo: 'equipo/reclutamiento', pathMatch: 'full' }, 
+      { path: 'planillas', redirectTo: 'planillas/gestion-vacaciones', pathMatch: 'full' }, 
+
       { path: 'administracion', component: AdministracionComponent},
       { path: 'administracion/gestion-paginas', component: GestionPaginasComponent},
       { path: 'administracion/gestion-usuarios', component: GestionUsuariosComponent},

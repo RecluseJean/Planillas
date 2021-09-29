@@ -63,8 +63,6 @@ let dataSet = [
     this.nodes().to$().removeClass('selected')
     });
 
-
-
     //example 2
     var table2 = $('#example2').DataTable( {
         createdRow: function ( row, data, index ) {

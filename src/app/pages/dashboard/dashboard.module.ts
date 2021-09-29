@@ -41,6 +41,7 @@ import { GenerarPlanillaComponent } from './planillas/generar-planilla/generar-p
 import { GestionVacacionesComponent } from './planillas/gestion-vacaciones/gestion-vacaciones.component';
 import { PrestamoComponent } from './planillas/prestamo/prestamo.component';
 import { ComponentsModule } from '../components/components.module';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 
 @NgModule({
@@ -87,8 +88,9 @@ import { ComponentsModule } from '../components/components.module';
     CommonModule,
     RouterModule,   
     DashboardRoutingModule,
-    ComponentsModule
-    
+    ComponentsModule,
+    NgxPaginationModule
+        
   ]
 })
 export class DashboardModule { }

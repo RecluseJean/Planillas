@@ -3,7 +3,6 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { DashboardComponent } from './dashboard.component';
 
-import { AdministracionComponent } from './administracion/administracion/administracion.component';
 import { GestionPaginasComponent } from './administracion/gestion-paginas/gestion-paginas.component';
 import { GestionUsuariosComponent } from './administracion/gestion-usuarios/gestion-usuarios.component';
 
@@ -44,15 +43,15 @@ const routesDash : Routes = [
   {
     path: 'dashboard', component: DashboardComponent,
     children: [
-      { path: '', redirectTo: 'administracion', pathMatch: 'full' },  
-      { path: 'administracion', redirectTo: 'administracion', pathMatch: 'full' },  
+      { path: '', redirectTo: 'administracion/gestion-paginas', pathMatch: 'full' },  
+
+      { path: 'administracion', redirectTo: 'administracion/gestion-paginas', pathMatch: 'full' },  
       { path: 'configuracion', redirectTo: 'configuracion/escalones-quinta', pathMatch: 'full' }, 
       { path: 'contabilidad', redirectTo: 'contabilidad/concepto-cuentas', pathMatch: 'full' }, 
       { path: 'empleado', redirectTo: 'empleado/solicitud', pathMatch: 'full' },  
       { path: 'equipo', redirectTo: 'equipo/reclutamiento', pathMatch: 'full' }, 
       { path: 'planillas', redirectTo: 'planillas/gestion-vacaciones', pathMatch: 'full' }, 
 
-      { path: 'administracion', component: AdministracionComponent},
       { path: 'administracion/gestion-paginas', component: GestionPaginasComponent},
       { path: 'administracion/gestion-usuarios', component: GestionUsuariosComponent},
 

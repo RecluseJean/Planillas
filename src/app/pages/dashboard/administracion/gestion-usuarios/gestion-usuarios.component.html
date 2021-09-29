@@ -1,0 +1,66 @@
+<div class="container-fluid">
+    <div class="page-titles">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:void(0)">Administración</a></li>
+            <li class="breadcrumb-item active"><a href="javascript:void(0)">Gestión de Páginas</a></li>
+        </ol>
+    </div>
+    <!-- row -->
+    <div class="row">       
+        <div class="col-lg-12">
+            <!--Card-->
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">Perfil</h4>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table  class="table table-hover table-responsive-sm">
+                            <thead class="thead-primary">
+                                <tr>
+                                    <th>#UserName</th>
+                                    <th>Correo</th>                                   
+                                    <th>Rol</th>
+                                    <th>Estado</th>
+                                    <th>Editar</th>                                   
+                                    <th>Reestablecer Contraseña</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let lista of CurrentPerfil | paginate: { itemsPerPage: 5, currentPage: p }">
+                                    <th> {{lista.id}} </th>
+                                    <td> {{lista.correo}}</td>   
+                                    <td> {{lista.rol}} </td> 
+
+                                    <td *ngIf="lista.estado == 'Activo'"> 
+                                        <span class="badge badge-success"> {{lista.estado}} </span>
+                                    </td>
+                                    <td *ngIf="lista.estado == 'Inactivo'"> 
+                                        <span class="badge badge-danger"> {{lista.estado}} </span>
+                                    </td>
+                                                                      
+                                    <td>
+                                        <div class="d-flex">
+                                            <!--
+                                                <a href="#" class="btn btn-primary shadow btn-xs sharp mr-2"><i class="fa fa-pencil"></i></a>
+                                                <a href="#" class="btn btn-danger shadow btn-xs sharp"><i class="fa fa-trash"></i></a>
+                                            -->
+                                            <a class="mr-2"></a>
+                                            <a href="#" class="btn btn-primary shadow btn-xs sharp"><i class="fa fa-pencil"></i></a>
+                                        </div>
+                                    </td>
+                                    <td> 
+                                        <span class="badge badge-primary light"> Restablecer </span>
+                                    </td>                                    
+                                </tr>
+                                <pagination-controls (pageChange)="p = $event" previousLabel=""
+                                nextLabel="" ></pagination-controls>                                
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!-- /# card -->
+        </div>       
+    </div>
+</div>

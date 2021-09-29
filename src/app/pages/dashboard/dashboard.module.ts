@@ -5,7 +5,6 @@ import { DashboardRoutingModule } from './dashboard-routing.module';
 
 import { DashboardComponent } from './dashboard.component';
 
-import { AdministracionComponent } from './administracion/administracion/administracion.component';
 import { GestionPaginasComponent } from './administracion/gestion-paginas/gestion-paginas.component';
 import { GestionUsuariosComponent } from './administracion/gestion-usuarios/gestion-usuarios.component';
 
@@ -48,7 +47,6 @@ import { NgxPaginationModule } from 'ngx-pagination';
   declarations: [
     DashboardComponent,
 
-    AdministracionComponent,
     GestionPaginasComponent,
     GestionUsuariosComponent,
 

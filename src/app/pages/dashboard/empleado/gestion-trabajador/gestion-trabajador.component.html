@@ -1,0 +1,914 @@
+<div class="container-fluid">
+    <div class="page-titles">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:void(0)">Empleado</a></li>
+            <li class="breadcrumb-item active"><a href="javascript:void(0)">Gestión Trabajador</a></li>
+        </ol>
+    </div>
+
+   
+    <div class="col-xl-12 col-lg-12" >
+        <div class="card">                                               
+            <div class="card-body">
+                <div class="basic-form">
+                    <form>       
+                        <div class="d-sm-flex flex-wrap align-items-center d-block mb-md-0 mb-0">
+                            <div class="pr-3 mb-2">
+                                <button type="button" class="btn light btn-primary" data-toggle="modal" data-target=".mgt1">
+                                    <span class="btn-icon-left text-primary">
+                                        <i class="fa fa-plus color-info"></i>
+                                    </span>Nuevo Trabajador
+                                </button>
+                                
+                            </div>
+                            <div class="pr-3 mb-2"> 
+                                <button type="button" class="btn light btn-primary" id="attachment">                                    
+                                    <span class="btn-icon-left text-primary">
+                                        <i class="fa fa-download color-info"></i>
+                                    </span>Reporte General                              
+                                </button>
+                            </div>
+                            <div class="pr-3 mb-2 mr-auto">
+                                
+                                <button type="button" class="btn light btn-primary" style="overflow: hidden; position: relative;">
+                                    <input class="fileInput" type="file" name="file1" accept=".csv"
+                                    style="cursor: pointer; height: 100%; position:absolute; top: 0; right: 0; z-index: 99; opacity: 0; -moz-opacity: 0; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0)"/>
+                                    <span class="btn-icon-left text-primary">
+                                        <i class="fa fa-upload color-info"></i>
+                                    </span>Carga Trabajadores
+                                </button>
+                            </div>
+                            <div class="pr-3 mb-2 ml-1">
+                                <div class="form-group mb-0">
+                                    <label class="radio-inline mr-3"><input type="radio" name="optradio"> Activo </label>
+                                    <label class="radio-inline mr-3"><input type="radio" name="optradio"> Inactivo </label>
+                                </div>
+                            </div>
+                            <div class="input-group mb-2 diet-search">
+                                <input type="text" class="form-control" placeholder="Search Menus here">
+                                <div class="input-group-append">
+                                    <button class="btn btn-primary" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+                                </div>
+                            </div>                           
+                        </div>                        
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xl-12">
+        <div class="card">            
+            <div class="card-body">
+                <ul class="nav nav-pills mb-4">
+                    <li class=" nav-item">
+                        <a href="#navpillsGT1" class="nav-link active" data-toggle="tab" aria-expanded="false">Planillas</a>
+                    </li>
+                    <li class="nav-item mr-auto">
+                        <a href="#navpillsGT2" class="nav-link" data-toggle="tab" aria-expanded="false">Recibo por Honorarios</a>
+                    </li>      
+                </ul>
+
+                <div class="tab-content">
+                    <div id="navpillsGT1" class="tab-pane active">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="card">                                        
+                                    <div class="card-body">
+                                        <div class="table-responsive">
+                                            <table class="table table-sm mb-0 table-responsive-lg text-black">
+                                                <thead>
+                                                    <tr >                                                        				
+                                                        <th class="align-middle">#Id</th>
+                                                        <th class="align-middle">Nombres</th>
+                                                        <th class="align-middle">Número Documento</th>
+                                                        <th class="align-middle">Asistencias</th>
+                                                        <th class="align-middle">Faltas</th>
+                                                        <th class="align-middle">Permisos</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="orders">
+                                                    <tr class="btn-reveal-trigger" *ngFor="let lista of CurrentPerfil | paginate: { itemsPerPage: 5, currentPage: p }">                                                       
+                        
+                                                        <td class="py-2">
+                                                            <a href="#">
+                                                                <strong>#181</strong>
+                                                            </a>
+                                                        </td>
+                                                        
+                                                        <td class="py-2">
+                                                             <strong>Ricky Antony</strong>
+                                                             <br/>
+                                                             <a href="mailto:ricky@example.com">ricky@example.com
+                                                            </a>
+                                                        </td>
+                                                        <td class="py-2">20042020</td>
+                                                        <td class="py-2">
+                                                            <div class="progress bgl-primary">
+                                                                <div class="progress-bar bg-primary" style="width: 80%;" role="progressbar"><span class="sr-only">70% Complete</span>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="py-2">
+                                                            <span class="badge badge-primary light">20%</span>
+                                                        </td>                          
+                                                        <td class="py-2">
+                                                            <button type="button" class="btn tp-btn-light btn-info">ver</button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="btn-reveal-trigger">                                                       
+                                                        <td class="py-2">
+                                                            <strong>#182</strong>
+                                                        </td>
+                                                        <td class="py-2">
+                                                            <strong>Kin Rossow</strong>
+                                                            <br />
+                                                            <a href="mailto:kin@example.com">kin@example.com</a>
+                                                        </td>
+                                                        <td class="py-2">20042020</td>
+                                                        <td class="py-2">
+                                                            <div class="progress  bgl-success">
+                                                                <div class="progress-bar bg-success" style="width: 100%;" role="progressbar"><span class="sr-only">70% Complete</span>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="py-2">
+                                                            <span class="badge badge-success">0%</span>
+                                                        </td>                                
+                                                        <td class="py-2">
+                                                            <button type="button" class="btn tp-btn-light btn-info">ver</button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="btn-reveal-trigger">                                                        
+                                                        <td class="py-2">
+                                                            <strong>#183</strong>
+                                                        </td>
+                                                        <td class="py-2">
+                                                            <strong>Merry Diana</strong>
+                                                            <br/>
+                                                            <a href="mailto:merry@example.com">merry@example.com</a>
+                                                        </td>
+                                                        <td class="py-2">30042020</td>
+                                                        <td class="py-2">
+                                                            <div class="progress bgl-danger">
+                                                                <div class="progress-bar bg-danger" style="width: 30%;" role="progressbar"><span class="sr-only">70% Complete</span>
+                                                                </div>
+                                                            </div>                                                       
+                                                        </td>
+                                                        <td class="py-2">
+                                                            <span class="badge badge-danger">70%</span>
+                                                        </td>        
+                                                        <td class="py-2">
+                                                            <button type="button" class="btn tp-btn-light btn-info">ver</button>
+                                                        </td>                       
+                                                    </tr>
+                                                    <tr class="btn-reveal-trigger">                                                        
+                                                        <td class="py-2">                                    
+                                                            <strong>#184</strong>
+                                                        </td>
+                                                        <td class="py-2">
+                                                            <strong>Bucky Robert</strong>
+                                                            <br/>
+                                                            <a href="mailto:bucky@example.com">bucky@example.com</a>
+                                                        </td>
+                                                        <td class="py-2">30042020</td>
+                                                        <td class="py-2">
+                                                            <div class="progress bgl-warning">
+                                                                <div class="progress-bar bg-warning" style="width: 50%;" role="progressbar"><span class="sr-only">70% Complete</span>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="py-2">
+                                                            <span class="badge badge-warning">50%</span>
+                                                        </td>                               
+                                                        <td class="py-2">
+                                                            <button type="button" class="btn tp-btn-light btn-info">ver</button>
+                                                        </td>
+                                                    </tr> 
+                                                    <pagination-controls (pageChange)="p = $event" previousLabel="" nextLabel="" ></pagination-controls>                                                       
+                                                </tbody>
+                                            </table>  
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="navpillsGT2" class="tab-pane">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="card">                                        
+                                    <div class="card-body">
+                                        <div class="table-responsive">
+                                            <table class="table table-sm mb-0 table-responsive-lg text-black">
+                                                <thead>
+                                                    <tr>			
+                                                        <th class="align-middle">#Id</th>
+                                                        <th class="align-middle">Nombres</th>
+                                                        <th class="align-middle">Número Documento</th>
+                                                        <th class="align-middle">Asistencias</th>
+                                                        <th class="align-middle">Faltas</th>
+                                                        <th class="align-middle">Permisos</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="orders">
+                                                    <tr class="btn-reveal-trigger" *ngFor="let lista of CurrentPerfil | paginate: { itemsPerPage: 5, currentPage: p }">                                                                               
+                                                        <td class="py-2">
+                                                            <a href="#">
+                                                                <strong>#181</strong>
+                                                            </a>
+                                                        </td>
+                                                        
+                                                        <td class="py-2">
+                                                             <strong>Ricky Antony</strong>
+                                                             <br/>
+                                                             <a href="mailto:ricky@example.com">ricky@example.com
+                                                            </a>
+                                                        </td>
+                                                        <td class="py-2">20042020</td>
+                                                        <td class="py-2">
+                                                            <div class="progress bgl-primary">
+                                                                <div class="progress-bar bg-primary" style="width: 80%;" role="progressbar"><span class="sr-only">70% Complete</span>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="py-2">
+                                                            <span class="badge badge-primary light">20%</span>
+                                                        </td>                          
+                                                        <td class="py-2">
+                                                            <button type="button" class="btn tp-btn-light btn-info">ver</button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="btn-reveal-trigger">                                                      
+                                                        <td class="py-2">
+                                                            <strong>#182</strong>
+                                                        </td>
+                                                        <td class="py-2">
+                                                            <strong>Kin Rossow</strong>
+                                                            <br />
+                                                            <a href="mailto:kin@example.com">kin@example.com</a>
+                                                        </td>
+                                                        <td class="py-2">20042020</td>
+                                                        <td class="py-2">
+                                                            <div class="progress  bgl-success">
+                                                                <div class="progress-bar bg-success" style="width: 100%;" role="progressbar"><span class="sr-only">70% Complete</span>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="py-2">
+                                                            <span class="badge badge-success">0%</span>
+                                                        </td>                                
+                                                        <td class="py-2">
+                                                            <button type="button" class="btn tp-btn-light btn-info">ver</button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="btn-reveal-trigger">                                                        
+                                                        <td class="py-2">
+                                                            <strong>#183</strong>
+                                                        </td>
+                                                        <td class="py-2">
+                                                            <strong>Merry Diana</strong>
+                                                            <br/>
+                                                            <a href="mailto:merry@example.com">merry@example.com</a>
+                                                        </td>
+                                                        <td class="py-2">30042020</td>
+                                                        <td class="py-2">
+                                                            <div class="progress bgl-danger">
+                                                                <div class="progress-bar bg-danger" style="width: 30%;" role="progressbar"><span class="sr-only">70% Complete</span>
+                                                                </div>
+                                                            </div>                                                       
+                                                        </td>
+                                                        <td class="py-2">
+                                                            <span class="badge badge-danger">70%</span>
+                                                        </td>        
+                                                        <td class="py-2">
+                                                            <button type="button" class="btn tp-btn-light btn-info">ver</button>
+                                                        </td>                       
+                                                    </tr>
+                                                    <tr class="btn-reveal-trigger">                                                        
+                                                        <td class="py-2">                                    
+                                                            <strong>#184</strong>
+                                                        </td>
+                                                        <td class="py-2">
+                                                            <strong>Bucky Robert</strong>
+                                                            <br/>
+                                                            <a href="mailto:bucky@example.com">bucky@example.com</a>
+                                                        </td>
+                                                        <td class="py-2">30042020</td>
+                                                        <td class="py-2">
+                                                            <div class="progress bgl-warning">
+                                                                <div class="progress-bar bg-warning" style="width: 50%;" role="progressbar"><span class="sr-only">70% Complete</span>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td class="py-2">
+                                                            <span class="badge badge-warning">50%</span>
+                                                        </td>                               
+                                                        <td class="py-2">
+                                                            <button type="button" class="btn tp-btn-light btn-info">ver</button>
+                                                        </td>
+                                                    </tr> 
+                                                    <pagination-controls (pageChange)="p = $event" previousLabel="" nextLabel="" ></pagination-controls>                                                       
+                                                </tbody>
+                                            </table>  
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                  
+                </div>       
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal -->                                        
+    <div  class="modal fade mgt1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Tipo Comprobante de Pago</h5>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="basic-form">
+                        <form>
+                            <div class="form-row">                                  
+                                <div class="col-sm-12 mt-2 mt-sm-2">
+                                    <label>Tipo Documento :</label>
+                                    <select class="form-control default-select" id="sel1">
+                                        <option selected disabled>Selecciona Un Documento</option>
+                                        <option>Planilla</option>
+                                        <option>Recibo por Honorario</option>                                         
+                                    </select>                                                                        
+                                </div>                                    
+                            </div>  
+                        </form>
+                    </div>                                        
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger light" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".mgt2">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>                               
+    <!-- /# Modal -->   
+    <!-- Modal 2 -->            
+    <div class="modal fade bd-example-modal-lg mgt2" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Registrar Trabajador</h5>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="col-xl-12">                        
+                        <!-- Nav tabs -->
+                        <div class="custom-tab-1">
+                            <ul class="nav nav-tabs">
+                                <li class="nav-item">
+                                    <a class="nav-link active" data-toggle="tab" href="#personal"><i class="la la-home mr-2"></i> Personal</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="tab" href="#general"><i class="la la-user mr-2"></i> General</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="tab" href="#contrato"><i class="la la-phone mr-2"></i> Contrato</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="tab" href="#aportaciones"><i class="la la-envelope mr-2"></i> Aportaciones</a>
+                                </li>
+                            </ul><!---->
+                            <div class="tab-content">
+                                <div class="tab-pane fade show active mb-0" id="personal" role="tabpanel">
+                                    <div class="pt-4">
+                                        <div class="card table-active mt-1 mb-0">
+                                            <div class="card-body">
+                                                <form>
+                                                    <div class="form-row">
+                                                        <!--Documento-->
+                                                        <div class="col-sm-4  mt-2 mt-sm-2">
+                                                            <label>Tipo de Documento :</label>
+                                                            <select class="form-control default-select" id="sel1">
+                                                                <option selected disabled>Seleccione un Documento</option>
+                                                                <option>Dni</option>
+                                                                <option>Pasaporte</option>
+                                                                <option>Carnetde Extranjería</option>
+                                                            </select>                                                                        
+                                                        </div> 
+                                                        <div class="col-sm-4 mt-2 mt-sm-2">
+                                                            <label>Nro. de Documento :</label>
+                                                            <input type="text" class="form-control" placeholder="Ingrese el nro. de pasaporte">
+                                                        </div>
+                                                        <!--Si es Pasaporte-->                                                  
+                                                        <div class="col-sm-4  mt-2 mt-sm-2">
+                                                            <label>Pais Emisor :</label>
+                                                            <select class="form-control default-select" id="sel2">
+                                                                <option>Perú</option>
+                                                                <option>Brasil</option>
+                                                                <option>Rusia</option>
+                                                                <option>Dinamarca</option>
+                                                            </select>                                                                        
+                                                        </div>    
+                                                        <!--Fin Documento-->
+                                                        <!--Datos Personales-->
+                                                        <div class="col-sm-4 mt-2 mt-sm-2">
+                                                            <label>Nombres :</label>
+                                                            <input type="text" class="form-control" placeholder="Ingrese sus Nombres">
+                                                        </div>
+                                                        <div class="col-sm-4 mt-2 mt-sm-2">
+                                                            <label>Apellido Paterno :</label>
+                                                            <input type="text" class="form-control" placeholder="Ingrese su Apellido">
+                                                        </div>
+                                                        <div class="col-sm-4 mt-2 mt-sm-2">
+                                                            <label>Apellido Materno :</label>
+                                                            <input type="text" class="form-control" placeholder="Ingrese su Apellido">
+                                                        </div>
+        
+                                                        <div class="col-sm-4 mt-2 mt-sm-2">
+                                                            <label>Fecha de Nacimiento :</label>
+                                                            <input type="date" class="form-control" placeholder="Ingrese sus Nombres">
+                                                        </div>
+                                                        <div class="col-sm-4  mt-2 mt-sm-2">
+                                                            <label>Sexo :</label>
+                                                            <select class="form-control default-select" id="sel2">
+                                                                <option>Seleccione una opción</option>
+                                                                <option>Masculino</option>
+                                                                <option>Femenino</option>
+                                                            </select>                                                                        
+                                                        </div>  
+                                                        <div class="col-sm-4  mt-2 mt-sm-2">
+                                                            <label>Estado Civil :</label>
+                                                            <select class="form-control default-select" id="sel2">
+                                                                <option>Seleccione un Estado</option>
+                                                                <option>Soltero</option>
+                                                                <option>Casado</option>
+                                                                <option>Viudo</option>
+                                                                <option>Divorciado</option>
+                                                            </select>                                                                        
+                                                        </div>  
+        
+                                                        <div class="col-sm-4 mt-2 mt-sm-2">
+                                                            <label>Correo :</label>
+                                                            <input type="email" class="form-control" placeholder="Ingrese el Correo">
+                                                        </div>
+                                                        <div class="col-sm-4 mt-2 mt-sm-2">
+                                                            <label>Celular :</label>
+                                                            <input type="text" class="form-control" placeholder="Ingrese el Nro. Celular">
+                                                        </div>
+                                                        <!--Fin Datos Personales-->
+                                                    </div>  
+                                                </form>
+                                            </div>
+                                        </div>                                        
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="general">
+                                    <div class="pt-4">                                        
+                                        <form>
+                                            <div class="form-row">
+                                                <div class="mt-1 col-sm-6 mb-0" >
+                                                    <div class="card-body table-active" style="border-radius: 25px;">
+                                                        <div class="form-row">
+                                                            <div class="col-sm-12  mt-2 mt-sm-2">
+                                                                <label>Departamento</label>
+                                                                <select class="form-control default-select" id="sel1">
+                                                                    <option selected disabled>Seleccione un Documento</option>
+                                                                    <option>Limas</option>
+                                                                    <option>Ayacucho</option>
+                                                                    <option>Cuzco</option>
+                                                                </select>                                                                        
+                                                            </div> 
+                                                            <div class="col-sm-12  mt-2 mt-sm-2">
+                                                                <label>Provincia</label>
+                                                                <select class="form-control default-select" id="sel1">
+                                                                    <option selected disabled>Seleccione un Documento</option>
+                                                                    <option>Lima</option>
+                                                                    <option>Lima</option>
+                                                                    <option>Lima</option>
+                                                                </select>                                                                        
+                                                            </div> 
+                                                            <div class="col-sm-12  mt-2 mt-sm-2">
+                                                                <label>Distrito</label>
+                                                                <select class="form-control default-select" id="sel1">
+                                                                    <option selected disabled>Seleccione un Documento</option>
+                                                                    <option>Comas</option>
+                                                                    <option>Carabayllo</option>
+                                                                    <option>Magdalena</option>
+                                                                </select>                                                                        
+                                                            </div>   
+                                                        </div>
+                                                    </div>
+                                                </div> 
+                                                <div class="mt-1 col-sm-6 mb-0">
+                                                    <div class="card-body table-active" style="border-radius: 25px;">
+                                                        <div class="form-row">
+                                                            <div class="col-sm-12  mt-2 mt-sm-2">
+                                                                <label>Dirección</label>
+                                                                <input type="text" class="form-control" placeholder="Ingrese la Dirección">                                                                   
+                                                            </div> 
+                                                            <div class="col-sm-6 mt-2 mt-sm-2">
+                                                                <label>Zona</label>
+                                                                <select class="form-control default-select" id="sel1">
+                                                                    <option selected>Asentamiento</option>
+                                                                    <option>Caserío</option>
+                                                                </select>                                                                        
+                                                            </div> 
+                                                            <div class="col-sm-6 mt-2 mt-sm-2">
+                                                                <label>Nombre</label>
+                                                                <input type="text" class="form-control" placeholder="Ingrese el Nombre">                                                                                                                                                                                                 
+                                                            </div>
+                                                            <div class="col-sm-12  mt-2 mt-sm-2">
+                                                                <label>Referencia</label>
+                                                                <input type="text" class="form-control" placeholder="Ingrese una Referencia">                                                                                                                                                                                                 
+                                                            </div>   
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="mt-2 col-sm-12 mb-0">
+                                                    <div class="card-body table-active" style="border-radius: 25px;">
+                                                        <div class="form-row">                                                            
+                                                            <div class="col-sm-5 mt-1 mt-sm-2">
+                                                                <label>Educación</label>
+                                                                <select class="form-control default-select" id="sel1">
+                                                                    <option selected>Universitario</option>
+                                                                    <option>Secundaria</option>
+                                                                </select>                                                                        
+                                                            </div> 
+                                                            <div class="col-sm-2 mt-1 mt-sm-2">
+                                                                <label>Hijos</label>
+                                                                <input type="text" class="form-control" placeholder="Cantidad">                                                                   
+                                                            </div> 
+                                                            <div class="col-sm-5 mt-1 mt-sm-2">
+                                                                <label>Ocupación</label>
+                                                                <input type="text" class="form-control" placeholder="Ingrese la Ocupación">                                                                                                                                                                                                 
+                                                            </div>                                                              
+                                                        </div>
+                                                    </div>
+                                                </div>   
+                                            </div>                                                 
+                                        </form> 
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="contrato">
+                                    <div class="pt-4">
+                                        <form>
+                                            <div class="form-row">
+                                                <div class="mt-1 col-sm-12 mb-0" >
+                                                    <div class="card-body table-active" style="border-radius: 25px;">
+                                                        <div class="form-row">
+                                                            <div class="col-sm-6  mt-2 mt-sm-2">
+                                                                <label>Regimen Laboral</label>
+                                                                <select class="form-control default-select" id="sel1">
+                                                                    <option selected disabled>Seleccione un Documento</option>
+                                                                    <option>Limas</option>
+                                                                    <option>Ayacucho</option>
+                                                                    <option>Cuzco</option>
+                                                                </select>                                                                        
+                                                            </div> 
+                                                            <div class="col-sm-6  mt-2 mt-sm-2">
+                                                                <label>Contrato Laboral</label>
+                                                                <select class="form-control default-select" id="sel1">
+                                                                    <option selected disabled>Seleccione un Documento</option>
+                                                                    <option>Lima</option>
+                                                                    <option>Lima</option>
+                                                                    <option>Lima</option>
+                                                                </select>                                                                        
+                                                            </div> 
+                                                            <div class="col-sm-6  mt-2 mt-sm-2">
+                                                                <label>Situación</label>
+                                                                <select class="form-control default-select" id="sel1">
+                                                                    <option selected disabled>Seleccione un Documento</option>
+                                                                    <option>Comas</option>
+                                                                    <option>Carabayllo</option>
+                                                                    <option>Magdalena</option>
+                                                                </select>                                                                        
+                                                            </div>
+                                                            <div class="col-sm-6  mt-2 mt-sm-2">
+                                                                <label>Centro Costo</label>
+                                                                <select class="form-control default-select" id="sel1">
+                                                                    <option selected disabled>Seleccione un Documento</option>
+                                                                    <option>Comas</option>
+                                                                    <option>Carabayllo</option>
+                                                                    <option>Magdalena</option>
+                                                                </select>                                                                        
+                                                            </div>
+                                                            <div class="col-sm-4  mt-2 mt-sm-2">
+                                                                <label>Área Empresa</label>
+                                                                <select class="form-control default-select" id="sel1">
+                                                                    <option selected disabled>Seleccione un Documento</option>
+                                                                    <option>Limas</option>
+                                                                    <option>Ayacucho</option>
+                                                                    <option>Cuzco</option>
+                                                                </select>                                                                        
+                                                            </div> 
+                                                            <div class="col-sm-4  mt-2 mt-sm-2">
+                                                                <label>Puesto</label>
+                                                                <select class="form-control default-select" id="sel1">
+                                                                    <option selected disabled>Seleccione un Documento</option>
+                                                                    <option>Lima</option>
+                                                                    <option>Lima</option>
+                                                                    <option>Lima</option>
+                                                                </select>                                                                        
+                                                            </div> 
+                                                            <div class="col-sm-4  mt-2 mt-sm-2">
+                                                                <label>Horario</label>
+                                                                <select class="form-control default-select" id="sel1">
+                                                                    <option selected disabled>Seleccione un Documento</option>
+                                                                    <option>Comas</option>
+                                                                    <option>Carabayllo</option>
+                                                                    <option>Magdalena</option>
+                                                                </select>                                                                        
+                                                            </div>                                                                                                                           
+                                                        </div>
+                                                    </div>
+                                                </div> 
+                                                <div class="mt-1 col-sm-12 mb-0">
+                                                    <div class="card-body table-active" style="border-radius: 25px;">
+                                                        <div class="form-row">
+                                                            <div class="col-sm-4 mt-2 mt-sm-2">
+                                                                <label>Fecha Inicio</label>
+                                                                <input type="date" class="form-control">
+                                                            </div>
+                                                            <div class="col-sm-4  mt-2 mt-sm-2">
+                                                                <label>Sueldo</label>
+                                                                <input type="text" class="form-control" placeholder="s/0.00">                                                                   
+                                                            </div> 
+                                                            <div class="col-sm-4  mt-2 mt-sm-2">
+                                                                <label>Por Hora</label>
+                                                                <input disabled type="text" class="form-control" placeholder="s/0.00">                                                                   
+                                                            </div> 
+                                                            <div class="col-sm-6 mt-2 mt-sm-2">
+                                                                <label>Tipo Pago</label>
+                                                                <select class="form-control default-select" id="sel1">
+                                                                    <option selected>Efectivo</option>
+                                                                    <option>Transferencia</option>
+                                                                </select>                                                                        
+                                                            </div>                                                             
+                                                            <!--Si es transferencia - HACER NGIF-->
+                                                            <div class="col-sm-6 mt-2 mt-sm-2">
+                                                                <label>Banco</label>
+                                                                <select class="form-control default-select" id="sel1">
+                                                                    <option selected>Bbva</option>
+                                                                    <option>Bcp</option>
+                                                                </select>                                                                        
+                                                            </div> 
+                                                            <div class="col-sm-4 mt-2 mt-sm-2">
+                                                                <label>Cuenta</label>
+                                                                <select class="form-control default-select" id="sel1">
+                                                                    <option selected disabled>Tipo de Cuenta</option>
+                                                                    <option>Ahorro</option>
+                                                                    <option>Corriente</option>
+                                                                </select>                                                                        
+                                                            </div> 
+                                                            <div class="col-sm-4 mt-2 mt-sm-2">
+                                                                <label>Moneda</label>
+                                                                <select class="form-control default-select" id="sel1">
+                                                                    <option selected disabled>Tipo de Moneda</option>
+                                                                    <option>Soles</option>
+                                                                    <option>Dolar</option>
+                                                                </select>                                                                        
+                                                            </div>
+                                                            <div class="col-sm-4  mt-2 mt-sm-2">
+                                                                <label>Nro. Cuenta</label>
+                                                                <input type="text" class="form-control" placeholder="Ingrese el Número de Cuenta">                                                                   
+                                                            </div> 
+                                                            <div class="col-sm-6  mt-2 mt-sm-2">
+                                                                <label>Nro. CCI</label>
+                                                                <input type="text" class="form-control" placeholder="Ingrese el Número de CCI">                                                                   
+                                                            </div>   
+                                                            <!--Fin Si es transferencia-->  
+                                                            <div class="col-sm-6 mt-2 mt-sm-2">
+                                                                <label>Movilidad</label>
+                                                                <input type="text" class="form-control" placeholder="s/0.00">                                                                   
+                                                            </div>                                                           
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="mt-2 col-sm-12 mb-0">
+                                                    <div class="card-body table-active" style="border-radius: 25px;">
+                                                        <div class="form-row">    
+                                                            <div class="col-sm-6 mt-1 mt-sm-2">
+                                                                <div class="custom-control custom-checkbox mb-3">
+                                                                    <input type="checkbox" class="custom-control-input" id="customCheckBox1" required>
+                                                                    <label class="custom-control-label" for="customCheckBox1">Regimen Alternativo, Acumulativo o Atípico</label>
+                                                                </div>
+                                                            </div> 
+                                                            <div class="col-sm-6 mt-1 mt-sm-2">
+                                                                <div class="custom-control custom-checkbox mb-3">
+                                                                    <input type="checkbox" class="custom-control-input" id="customCheckBox3" required>
+                                                                    <label class="custom-control-label" for="customCheckBox3">Jornada de Trabajo Máxima</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-6 mt-1 mt-sm-2">
+                                                                <div class="custom-control custom-checkbox mb-3">
+                                                                    <input type="checkbox" class="custom-control-input" id="customCheckBox5" required>
+                                                                    <label class="custom-control-label" for="customCheckBox2">Discapacidad</label>
+                                                                </div>
+                                                            </div>
+                                                            
+                                                            <div class="col-sm-6 mt-1 mt-sm-2">
+                                                                <div class="custom-control custom-checkbox mb-3">
+                                                                    <input type="checkbox" class="custom-control-input" id="customCheckBox4" required>
+                                                                    <label class="custom-control-label" for="customCheckBox4">Horario Nocturno</label>
+                                                                </div>
+                                                            </div>                                                       
+                                                                                                                        
+                                                        </div>
+                                                    </div>
+                                                </div>   
+                                            </div>                                                 
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="aportaciones">
+                                    <div class="pt-4">
+                                        <form>
+                                            <div class="form-row">
+                                                <div class="mt-1 col-sm-12 mb-0" >
+                                                    <div class="card-body table-active" style="border-radius: 25px;">
+                                                        <div class="form-row">
+                                                            <div class="col-sm-4 mt-sm-2">
+                                                                <label>Regimen Pensionario</label>
+                                                                <select class="form-control default-select" id="sel1">
+                                                                    <option selected disabled>Seleccione un Regimen</option>
+                                                                    <option>Prima</option>
+                                                                    <option>Onp</option>
+                                                                    <option>Habitat</option>
+                                                                </select>                                                                        
+                                                            </div> 
+                                                            <div class="col-sm-4 mt-sm-2">
+                                                                <div class="custom-control custom-checkbox mb-3">
+                                                                    <input type="checkbox" class="custom-control-input" id="customCheckBox5" required>
+                                                                    <label class="custom-control-label" for="customCheckBox2">Discapacidad</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-4 mt-sm-2">
+                                                                <label>Nro. Cuenta</label>
+                                                                <input type="text" class="form-control" placeholder="Ingrese el Número de Cuenta">                                                                   
+                                                            </div> 
+                                                            <div class="col-sm-4 mt-sm-2">
+                                                                <label>Situación</label>
+                                                                <select class="form-control default-select" id="sel1">
+                                                                    <option selected disabled>Seleccione un Documento</option>
+                                                                    <option>Comas</option>
+                                                                    <option>Carabayllo</option>
+                                                                    <option>Magdalena</option>
+                                                                </select>                                                                        
+                                                            </div>
+                                                            <div class="col-sm-4 mt-sm-2">
+                                                                <label>Centro Costo</label>
+                                                                <select class="form-control default-select" id="sel1">
+                                                                    <option selected disabled>Seleccione un Documento</option>
+                                                                    <option>Comas</option>
+                                                                    <option>Carabayllo</option>
+                                                                    <option>Magdalena</option>
+                                                                </select>                                                                        
+                                                            </div>
+                                                            <div class="col-sm-4 mt-sm-2">
+                                                                <label>Nro. Cuenta</label>
+                                                                <input type="text" class="form-control" placeholder="Ingrese el Número de Cuenta">                                                                   
+                                                            </div> 
+                                                            <div class="col-sm-6 mt-sm-3">
+                                                                <div class="custom-control custom-checkbox mb-3">
+                                                                    <input type="checkbox" class="custom-control-input" id="customCheckBox1" required>
+                                                                    <label class="custom-control-label" for="customCheckBox1">Regimen Alternativo, Acumulativo o Atípico</label>
+                                                                </div>
+                                                            </div> 
+                                                            <div class="col-sm-6 mt-3 mt-sm-3">
+                                                                <div class="custom-control custom-checkbox mb-3">
+                                                                    <input type="checkbox" class="custom-control-input" id="customCheckBox3" required>
+                                                                    <label class="custom-control-label" for="customCheckBox3">Jornada de Trabajo Máxima</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-6 mt-sm-3">
+                                                                <div class="custom-control custom-checkbox mb-3">
+                                                                    <input type="checkbox" class="custom-control-input" id="customCheckBox5" required>
+                                                                    <label class="custom-control-label" for="customCheckBox2">Discapacidad</label>
+                                                                </div>
+                                                            </div>
+                                                                                                                                                                                   
+                                                        </div>
+                                                    </div>
+                                                </div> 
+                                                <div class="mt-1 col-sm-12 mb-0">
+                                                    <div class="card-body table-active" style="border-radius: 25px;">
+                                                        <div class="form-row">
+                                                            <div class="col-sm-4 mt-2 mt-sm-2">
+                                                                <label>Fecha Inicio</label>
+                                                                <input type="date" class="form-control">
+                                                            </div>
+                                                            <div class="col-sm-4  mt-2 mt-sm-2">
+                                                                <label>Sueldo</label>
+                                                                <input type="text" class="form-control" placeholder="s/0.00">                                                                   
+                                                            </div> 
+                                                            <div class="col-sm-4  mt-2 mt-sm-2">
+                                                                <label>Por Hora</label>
+                                                                <input disabled type="text" class="form-control" placeholder="s/0.00">                                                                   
+                                                            </div> 
+                                                            <div class="col-sm-6 mt-2 mt-sm-2">
+                                                                <label>Tipo Pago</label>
+                                                                <select class="form-control default-select" id="sel1">
+                                                                    <option selected>Efectivo</option>
+                                                                    <option>Transferencia</option>
+                                                                </select>                                                                        
+                                                            </div>                                                             
+                                                            <!--Si es transferencia - HACER NGIF-->
+                                                            <div class="col-sm-6 mt-2 mt-sm-2">
+                                                                <label>Banco</label>
+                                                                <select class="form-control default-select" id="sel1">
+                                                                    <option selected>Bbva</option>
+                                                                    <option>Bcp</option>
+                                                                </select>                                                                        
+                                                            </div> 
+                                                            <div class="col-sm-4 mt-2 mt-sm-2">
+                                                                <label>Cuenta</label>
+                                                                <select class="form-control default-select" id="sel1">
+                                                                    <option selected disabled>Tipo de Cuenta</option>
+                                                                    <option>Ahorro</option>
+                                                                    <option>Corriente</option>
+                                                                </select>                                                                        
+                                                            </div> 
+                                                            <div class="col-sm-4 mt-2 mt-sm-2">
+                                                                <label>Moneda</label>
+                                                                <select class="form-control default-select" id="sel1">
+                                                                    <option selected disabled>Tipo de Moneda</option>
+                                                                    <option>Soles</option>
+                                                                    <option>Dolar</option>
+                                                                </select>                                                                        
+                                                            </div>
+                                                            <div class="col-sm-4  mt-2 mt-sm-2">
+                                                                <label>Nro. Cuenta</label>
+                                                                <input type="text" class="form-control" placeholder="Ingrese el Número de Cuenta">                                                                   
+                                                            </div> 
+                                                            <div class="col-sm-6  mt-2 mt-sm-2">
+                                                                <label>Nro. CCI</label>
+                                                                <input type="text" class="form-control" placeholder="Ingrese el Número de CCI">                                                                   
+                                                            </div>   
+                                                            <!--Fin Si es transferencia-->  
+                                                            <div class="col-sm-6 mt-2 mt-sm-2">
+                                                                <label>Movilidad</label>
+                                                                <input type="text" class="form-control" placeholder="s/0.00">                                                                   
+                                                            </div>                                                           
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="mt-2 col-sm-12 mb-0">
+                                                    <div class="card-body table-active" style="border-radius: 25px;">
+                                                        <div class="form-row">    
+                                                            <div class="col-sm-6 mt-1 mt-sm-2">
+                                                                <div class="custom-control custom-checkbox mb-3">
+                                                                    <input type="checkbox" class="custom-control-input" id="customCheckBox1" required>
+                                                                    <label class="custom-control-label" for="customCheckBox1">Regimen Alternativo, Acumulativo o Atípico</label>
+                                                                </div>
+                                                            </div> 
+                                                            <div class="col-sm-6 mt-1 mt-sm-2">
+                                                                <div class="custom-control custom-checkbox mb-3">
+                                                                    <input type="checkbox" class="custom-control-input" id="customCheckBox3" required>
+                                                                    <label class="custom-control-label" for="customCheckBox3">Jornada de Trabajo Máxima</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-6 mt-1 mt-sm-2">
+                                                                <div class="custom-control custom-checkbox mb-3">
+                                                                    <input type="checkbox" class="custom-control-input" id="customCheckBox5" required>
+                                                                    <label class="custom-control-label" for="customCheckBox2">Discapacidad</label>
+                                                                </div>
+                                                            </div>
+                                                            
+                                                            <div class="col-sm-6 mt-1 mt-sm-2">
+                                                                <div class="custom-control custom-checkbox mb-3">
+                                                                    <input type="checkbox" class="custom-control-input" id="customCheckBox4" required>
+                                                                    <label class="custom-control-label" for="customCheckBox4">Horario Nocturno</label>
+                                                                </div>
+                                                            </div>                                                       
+                                                                                                                        
+                                                        </div>
+                                                    </div>
+                                                </div>   
+                                            </div>                                                 
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                                    
+                          
+                        <!--Fin Tab-->
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger light" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary">Continuar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal 2 -->      
+      
+</div>
+
+
+

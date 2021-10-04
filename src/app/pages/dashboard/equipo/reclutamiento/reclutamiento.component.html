@@ -1,0 +1,62 @@
+<div class="container-fluid">
+    <div class="page-titles">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:void(0)">Equipo</a></li>
+            <li class="breadcrumb-item active"><a href="javascript:void(0)">Reclutamiento</a></li>
+        </ol>
+    </div>
+    <div class="col-xl-12 col-lg-12" >
+        <div class="card">                                               
+            <div class="card-body">
+                <div class="basic-form">
+                    <form>                                        
+                        <div class="d-sm-flex flex-wrap align-items-center d-block mb-md-3 mb-0">
+                            <div class="mr-5 pr-3 mt-3">
+                                <div class="input-group mb-2 diet-search mr-4">
+                                    <input type="text" class="form-control" placeholder="Search Menus here">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-primary" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+                                    </div>
+                                </div> 
+                            </div>                                                    
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- row -->
+    <div class="row">       
+        <div class="col-lg-12">
+            <!--Card-->
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="card-title">Perfil</h4>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table  class="table table-hover table-responsive-sm">
+                            <thead class="thead-primary">
+                                <tr>
+                                    <th>#</th>
+                                    <th>Reclutamiento</th>                                   
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let lista of CurrentPerfil | paginate: { itemsPerPage: 5, currentPage: p }">
+                                    <th> {{lista.id}} </th>
+                                    <td> {{lista.nombre}} </td> 
+                                   
+                                </tr>
+                                <pagination-controls (pageChange)="p = $event" previousLabel=""
+                                nextLabel="" ></pagination-controls>                                
+                            </tbody>
+                        </table>   
+                    </div>
+                </div>
+            </div>
+            <!-- /# card -->
+                  
+        </div>       
+    </div>
+</div>

@@ -1,0 +1,409 @@
+<div class="container-fluid">
+    <div class="page-titles">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:void(0)">Equipo</a></li>
+            <li class="breadcrumb-item active"><a href="javascript:void(0)">Gestión de Equipo</a></li>
+        </ol>
+    </div>
+
+    <div class="col-xl-12">
+        <div class="card">            
+            <div class="card-body">
+                <ul class="nav nav-pills mb-4">
+                    <li class=" nav-item">
+                        <a (click)="this.VerBotonCrear()" href="#navpillsGE1" class="nav-link active" data-toggle="tab" aria-expanded="false">Equipo</a>
+                    </li>
+                    <li class="nav-item mr-auto">
+                        <a (click)="this.EsconderBotonCrear()" href="#navpillsGE2" class="nav-link" data-toggle="tab" aria-expanded="false">Solicitud</a>
+                    </li>  
+                    <li class="nav-item">
+                        <div class="input-group mt-0 diet-search mr-4">
+                            <input type="text" class="form-control" placeholder="Buscar Aquí">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                    </li>                                
+                    <li *ngIf="this.viewCrearEquipo" class="nav-item">
+                        <button type="button" class="btn btn-primary mt-0" data-toggle="modal" data-target="#modalCE">Crear Equipo
+                            <span class="btn-icon-right">
+                                    <i class="fa fa-plus color-info"></i>
+                            </span>
+                        </button>
+                    </li>                    
+                </ul>
+
+                <div class="tab-content">
+                    <div id="navpillsGE1" class="tab-pane active">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="card">                                        
+                                    <div class="card-body">
+                                        <div class="table-responsive">
+                                            <table class="table table-sm mb-0 table-responsive-lg text-black">
+                                                <thead>
+                                                    <tr>                                                        			
+                                                        <th class="align-middle">#Id</th>
+                                                        <th class="align-middle">Nombres</th>
+                                                        <th class="align-middle">Número Documento</th>                                                      
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="orders">
+                                                    <tr class="btn-reveal-trigger" *ngFor="let lista of CurrentPerfil | paginate: { itemsPerPage: 5, currentPage: p }">
+                                                                               
+                                                        <td class="py-2">
+                                                            <a href="#">
+                                                                <strong>#181</strong>
+                                                            </a>
+                                                        </td>                                                        
+                                                        <td class="py-2">
+                                                             <strong>Ricky Antony</strong>
+                                                             <br/>
+                                                             <a href="mailto:ricky@example.com">ricky@example.com
+                                                            </a>
+                                                        </td>
+                                                        <td class="py-2">20042020</td>                                                       
+                                                    </tr>
+                                                    <tr class="btn-reveal-trigger">
+                                                        
+                                                        <td class="py-2">
+                                                            <strong>#182</strong>
+                                                        </td>
+                                                        <td class="py-2">
+                                                            <strong>Kin Rossow</strong>
+                                                            <br />
+                                                            <a href="mailto:kin@example.com">kin@example.com</a>
+                                                        </td>
+                                                        <td class="py-2">20042020</td>                                                      
+                                                    </tr>
+                                                    <tr class="btn-reveal-trigger">
+                                                        
+                                                        <td class="py-2">
+                                                            <strong>#183</strong>
+                                                        </td>
+                                                        <td class="py-2">
+                                                            <strong>Merry Diana</strong>
+                                                            <br/>
+                                                            <a href="mailto:merry@example.com">merry@example.com</a>
+                                                        </td>
+                                                        <td class="py-2">30042020</td>                                                        
+                                                    </tr> 
+                                                    <pagination-controls (pageChange)="p = $event" previousLabel="" nextLabel="" ></pagination-controls>                                                       
+                                                </tbody>
+                                            </table>  
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="navpillsGE2" class="tab-pane">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="card">   
+                                    <div class="card-header">
+                                        <h4 class="card-title">Solicitados</h4>
+                                    </div>                                     
+                                    <div class="card-body">
+                                        <div class="table-responsive">
+                                            <table class="table table-sm mb-0 table-responsive-lg text-black">
+                                                <thead>
+                                                    <tr>                                                        			
+                                                        <th class="align-middle">Puesto</th>
+                                                        <th class="align-middle">Solicitante</th>
+                                                        <th class="align-middle">Fecha</th>
+                                                        <th class="align-middle">Estado</th>
+                                                        <th class="align-middle">Acciones</th>                                                        
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="orders">
+                                                    <tr class="btn-reveal-trigger" *ngFor="let lista of CurrentPerfil | paginate: { itemsPerPage: 5, currentPage: p }">
+                                                        
+                                                        <td class="py-2">
+                                                             <strong>Contador</strong>                                                             
+                                                        </td>
+                                                        <td class="py-2">ROLE_ADMIN</td>
+                                                        <td class="py-2">20/04/2020</td>
+                                                        <td class="py-2">
+                                                            <span class="badge badge-secondary light">Solicitado</span>
+                                                        </td>                          
+                                                        <td class="py-2">
+                                                            <div class="bootstrap-badge">                                                                
+                                                                <a href="javascript:void()" class="badge light badge-info" data-toggle="modal" data-target="#modalGS">Gestionar</a>                                                               
+                                                            </div>                                                            
+                                                        </td>                                                        
+                                                    </tr>
+                                                    <tr class="btn-reveal-trigger">
+                                                        
+                                                        <td class="py-2">
+                                                            <strong>Desarrollador</strong>
+                                                        </td>
+                                                        <td class="py-2">ROLE_ADMIN</td>
+                                                        <td class="py-2">20/04/2020</td>
+
+                                                        <td class="py-2">
+                                                            <span class="badge badge-secondary light">Solicitado</span>
+                                                        </td>                                
+                                                        <td class="py-2">
+                                                            <div class="bootstrap-badge">                                                                
+                                                                <a href="javascript:void()" class="badge light badge-info" data-toggle="modal" data-target="#modalGS">Gestionar</a>                                                               
+                                                            </div>                                                            
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="btn-reveal-trigger">
+                                                        
+                                                        <td class="py-2">
+                                                            <strong>CEO</strong>
+                                                        </td>
+                                                        <td class="py-2">ROLE_ADMIN</td>
+                                                        <td class="py-2">20/04/2020</td>
+
+                                                        <td class="py-2">
+                                                            <span class="badge badge-secondary light">Solicitado</span>
+                                                        </td>        
+                                                        <td class="py-2">
+                                                            <div class="bootstrap-badge">                                                                
+                                                                <a href="javascript:void()" class="badge light badge-info" data-toggle="modal" data-target="#modalGS">Gestionar</a>                                                               
+                                                            </div>                                                            
+                                                        </td>                       
+                                                    </tr>
+                                                    <tr class="btn-reveal-trigger">
+                                                        
+                                                        <td class="py-2">
+                                                            <strong>Jefe de Ventas</strong>
+                                                        </td>
+                                                        <td class="py-2">ROLE_ADMIN</td>
+                                                        <td class="py-2">20/04/2020</td>
+
+                                                        <td class="py-2">
+                                                            <span class="badge badge-secondary light">Solicitado</span>
+                                                        </td>                               
+                                                        <td class="py-2">
+                                                            <div class="bootstrap-badge">                                                                
+                                                                <a href="javascript:void()" class="badge light badge-info" data-toggle="modal" data-target="#modalGS">Gestionar</a>                                                               
+                                                            </div>                                                            
+                                                        </td>
+                                                    </tr> 
+                                                    <pagination-controls (pageChange)="p = $event" previousLabel="" nextLabel="" ></pagination-controls>                                                       
+                                                </tbody>
+                                            </table>  
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="card">   
+                                    <div class="card-header">
+                                        <h4 class="card-title">En Revisión</h4>
+                                    </div>                                     
+                                    <div class="card-body">
+                                        <div class="table-responsive">
+                                            <table class="table table-sm mb-0 table-responsive-lg text-black">
+                                                <thead>
+                                                    <tr>                                                        			
+                                                        <th class="align-middle">Puesto</th>
+                                                        <th class="align-middle">Solicitante</th>
+                                                        <th class="align-middle">Fecha</th>
+                                                        <th class="align-middle">Estado</th>
+                                                        <th class="align-middle">Acciones</th>                                                        
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="orders">
+                                                    <tr class="btn-reveal-trigger" *ngFor="let lista of CurrentPerfil | paginate: { itemsPerPage: 5, currentPage: p }">
+                                                        
+                                                        <td class="py-2">
+                                                             <strong>Contador</strong>                                                             
+                                                        </td>
+                                                        <td class="py-2">ROLE_ADMIN</td>
+                                                        <td class="py-2">20/04/2020</td>
+                                                        <td class="py-2">
+                                                            <span class="badge badge-warning">En Revisión</span>
+                                                        </td>                          
+                                                        <td class="py-2">
+                                                            <div class="bootstrap-badge">                                                                
+                                                                <a href="javascript:void()" class="badge light badge-info" data-toggle="modal" data-target="#modalGER">Gestionar</a>                                                               
+                                                            </div>                                                            
+                                                        </td>                                                        
+                                                    </tr>
+                                                    <tr class="btn-reveal-trigger">
+                                                        
+                                                        <td class="py-2">
+                                                            <strong>Desarrollador</strong>
+                                                        </td>
+                                                        <td class="py-2">ROLE_ADMIN</td>
+                                                        <td class="py-2">20/04/2020</td>
+
+                                                        <td class="py-2">
+                                                            <span class="badge badge-warning">En Revisión</span>
+                                                            <!--
+                                                            <span class="badge badge-success">Aprobada</span>
+                                                            -->
+                                                        </td>                                
+                                                        <td class="py-2">
+                                                            <div class="bootstrap-badge">                                                                
+                                                                <a href="javascript:void()" class="badge light badge-info" data-toggle="modal" data-target="#modalGER">Gestionar</a>                                                               
+                                                            </div>                                                            
+                                                        </td>
+                                                    </tr>
+                                                    <tr class="btn-reveal-trigger">
+                                                        
+                                                        <td class="py-2">
+                                                            <strong>CEO</strong>
+                                                        </td>
+                                                        <td class="py-2">ROLE_ADMIN</td>
+                                                        <td class="py-2">20/04/2020</td>
+
+                                                        <td class="py-2">
+                                                            <span class="badge badge-warning">En Revisión</span>
+                                                            <!--
+                                                            <span class="badge badge-danger">Rechazado</span>
+                                                            -->
+                                                        </td>        
+                                                        <td class="py-2">
+                                                            <div class="bootstrap-badge">                                                                
+                                                                <a href="javascript:void()" class="badge light badge-info" data-toggle="modal" data-target="#modalGER">Gestionar</a>                                                               
+                                                            </div>                                                            
+                                                        </td>                       
+                                                    </tr>
+                                                    <tr class="btn-reveal-trigger">
+                                                        
+                                                        <td class="py-2">
+                                                            <strong>Jefe de Ventas</strong>
+                                                        </td>
+                                                        <td class="py-2">ROLE_ADMIN</td>
+                                                        <td class="py-2">20/04/2020</td>
+
+                                                        <td class="py-2">
+                                                            <span class="badge badge-warning">En Revisión</span>
+                                                        </td>                               
+                                                        <td class="py-2">
+                                                            <div class="bootstrap-badge">                                                                
+                                                                <a href="javascript:void()" class="badge light badge-info" data-toggle="modal" data-target="#modalGER">Gestionar</a>                                                               
+                                                            </div>                                                            
+                                                        </td>
+                                                    </tr> 
+                                                    <pagination-controls (pageChange)="p = $event" previousLabel="" nextLabel="" ></pagination-controls>                                                       
+                                                </tbody>
+                                            </table>  
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                  
+                </div>       
+            </div>
+        </div>
+    </div>
+
+    <!--Modal Crear Equipo-->
+    <div class="modal fade" id="modalCE">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Nuevo Equipo</h5>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="basic-form">
+                        <form>
+                            <div class="form-row">
+                                <div class="form-group col-md-12">
+                                    <label>Nombre del Equipo</label>
+                                    <input type="text" class="form-control">
+                                </div>                                
+                            </div>  
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger light" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>                                
+    <!--Fin Modal Crear Equipo-->
+
+    <!--Modal Gestionar Solicitados-->
+    <div class="modal fade" id="modalGS">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Visualización de solicitud</h5>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="basic-form">
+                        <form>
+                            <div class="form-group row">
+                                <label class="col-sm-5 col-form-label text-black">Puesto del Recurso :</label>
+                                <label class="col-sm-7 col-form-label">Desarrollador</label>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-5 col-form-label text-black">Banda :</label>
+                                <label class="col-sm-7 col-form-label">1200</label>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-5 col-form-label text-black">Motivos :</label>
+                                <label class="col-sm-7 col-form-label">Laptop Nueva</label>
+                            </div>                            
+                        </form>
+                    </div>   
+                                
+                         
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger light" data-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn light btn-primary">En revisión</button>                               
+                </div>
+            </div>
+        </div>
+    </div>               
+    <!--Modal Gestionar Solicitados-->
+
+    <!--Modal Gestionar En Revisión-->
+    <div class="modal fade" id="modalGER">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Nuevo Equipo</h5>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="basic-form">
+                        <form>
+                            <div class="form-group row">
+                                <label class="col-sm-5 col-form-label text-black">Puesto del Recurso :</label>
+                                <label class="col-sm-7 col-form-label">Desarrollador</label>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-5 col-form-label text-black">Banda :</label>
+                                <label class="col-sm-7 col-form-label">1200</label>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-5 col-form-label text-black">Motivos :</label>
+                                <label class="col-sm-7 col-form-label">Laptop Nueva</label>                             
+                            </div>                            
+                        </form>
+                    </div>   
+                                
+                         
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger light" data-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn light btn-success">Aprovar</button>
+                    <button type="button" class="btn light btn-warning">Rechazar</button>
+                              
+                </div>
+            </div>
+        </div>
+    </div>               
+    <!--Fin Modal Gestionar En Revisión-->
+
+</div>
+
+

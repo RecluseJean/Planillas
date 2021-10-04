@@ -378,10 +378,12 @@
                                 <li class="nav-item">
                                     <a class="nav-link" data-toggle="tab" href="#contrato"><i class="la la-phone mr-2"></i> Contrato</a>
                                 </li>
+                                <!--Solo si es planillas-->
                                 <li class="nav-item">
                                     <a class="nav-link" data-toggle="tab" href="#aportaciones"><i class="la la-envelope mr-2"></i> Aportaciones</a>
                                 </li>
-                            </ul><!---->
+                                <!--Solo si es planillas-->
+                            </ul>
                             <div class="tab-content">
                                 <div class="tab-pane fade show active mb-0" id="personal" role="tabpanel">
                                     <div class="pt-4">
@@ -390,7 +392,7 @@
                                                 <form>
                                                     <div class="form-row">
                                                         <!--Documento-->
-                                                        <div class="col-sm-4  mt-2 mt-sm-2">
+                                                        <div class="col-sm-6  mt-2 mt-sm-2">
                                                             <label>Tipo de Documento :</label>
                                                             <select class="form-control default-select" id="sel1">
                                                                 <option selected disabled>Seleccione un Documento</option>
@@ -399,21 +401,27 @@
                                                                 <option>Carnetde Extranjería</option>
                                                             </select>                                                                        
                                                         </div> 
-                                                        <div class="col-sm-4 mt-2 mt-sm-2">
+                                                        <div class="col-sm-6 mt-2 mt-sm-2">
                                                             <label>Nro. de Documento :</label>
                                                             <input type="text" class="form-control" placeholder="Ingrese el nro. de pasaporte">
                                                         </div>
-                                                        <!--Si es Pasaporte-->                                                  
-                                                        <div class="col-sm-4  mt-2 mt-sm-2">
-                                                            <label>Pais Emisor :</label>
-                                                            <select class="form-control default-select" id="sel2">
-                                                                <option>Perú</option>
-                                                                <option>Brasil</option>
-                                                                <option>Rusia</option>
-                                                                <option>Dinamarca</option>
-                                                            </select>                                                                        
-                                                        </div>    
+                                                            <!--Si es Pasaporte-->                                                  
+                                                            <div class="col-sm-6  mt-2 mt-sm-2">
+                                                                <label>Pais Emisor :</label>
+                                                                <select class="form-control default-select" id="sel2">
+                                                                    <option>Perú</option>
+                                                                    <option>Brasil</option>
+                                                                    <option>Rusia</option>
+                                                                    <option>Dinamarca</option>
+                                                                </select>                                                                        
+                                                            </div>   
+                                                            <!--Si es Recibo por Honorario-->                                                  
+                                                            <div class="col-sm-6 mt-2 mt-sm-2">
+                                                                <label>Nro. de RUC :</label>
+                                                                <input type="text" class="form-control" placeholder="Ingrese el nro. de RUC">
+                                                            </div>
                                                         <!--Fin Documento-->
+
                                                         <!--Datos Personales-->
                                                         <div class="col-sm-4 mt-2 mt-sm-2">
                                                             <label>Nombres :</label>
@@ -528,6 +536,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
+                                                <!--Solo si Es Planillas - Si es Recibo por honorario hacer NGIF-->
                                                 <div class="mt-2 col-sm-12 mb-0">
                                                     <div class="card-body table-active" style="border-radius: 25px;">
                                                         <div class="form-row">                                                            
@@ -549,6 +558,7 @@
                                                         </div>
                                                     </div>
                                                 </div>   
+                                                <!--Solo si Es Planillas - Si es Recibo por honorario hacer NGIF-->
                                             </div>                                                 
                                         </form> 
                                     </div>
@@ -560,6 +570,7 @@
                                                 <div class="mt-1 col-sm-12 mb-0" >
                                                     <div class="card-body table-active" style="border-radius: 25px;">
                                                         <div class="form-row">
+                                                            <!--Solo si es planilla-->
                                                             <div class="col-sm-6  mt-2 mt-sm-2">
                                                                 <label>Regimen Laboral</label>
                                                                 <select class="form-control default-select" id="sel1">
@@ -596,6 +607,38 @@
                                                                     <option>Magdalena</option>
                                                                 </select>                                                                        
                                                             </div>
+                                                            <!--Solo si es planilla-->
+
+                                                            <!--Solo si es Recibo por Honorario-->                                                           
+                                                            <div class="col-sm-4  mt-2 mt-sm-2">
+                                                                <label>Contrato Laboral</label>
+                                                                <select class="form-control default-select" id="sel1">
+                                                                    <option selected disabled>Seleccione un Documento</option>
+                                                                    <option>Lima</option>
+                                                                    <option>Lima</option>
+                                                                    <option>Lima</option>
+                                                                </select>                                                                        
+                                                            </div> 
+                                                            <div class="col-sm-4  mt-2 mt-sm-2">
+                                                                <label>Situación</label>
+                                                                <select class="form-control default-select" id="sel1">
+                                                                    <option selected disabled>Seleccione un Documento</option>
+                                                                    <option>Comas</option>
+                                                                    <option>Carabayllo</option>
+                                                                    <option>Magdalena</option>
+                                                                </select>                                                                        
+                                                            </div>
+                                                            <div class="col-sm-4  mt-2 mt-sm-2">
+                                                                <label>Centro Costo</label>
+                                                                <select class="form-control default-select" id="sel1">
+                                                                    <option selected disabled>Seleccione un Documento</option>
+                                                                    <option>Comas</option>
+                                                                    <option>Carabayllo</option>
+                                                                    <option>Magdalena</option>
+                                                                </select>                                                                        
+                                                            </div>
+                                                            <!--Solo si es Recibo por Honorario-->
+
                                                             <div class="col-sm-4  mt-2 mt-sm-2">
                                                                 <label>Área Empresa</label>
                                                                 <select class="form-control default-select" id="sel1">
@@ -699,14 +742,14 @@
                                                             </div> 
                                                             <div class="col-sm-6 mt-1 mt-sm-2">
                                                                 <div class="custom-control custom-checkbox mb-3">
-                                                                    <input type="checkbox" class="custom-control-input" id="customCheckBox3" required>
-                                                                    <label class="custom-control-label" for="customCheckBox3">Jornada de Trabajo Máxima</label>
+                                                                    <input type="checkbox" class="custom-control-input" id="customCheckBox2" required>
+                                                                    <label class="custom-control-label" for="customCheckBox2">Jornada de Trabajo Máxima</label>
                                                                 </div>
                                                             </div>
                                                             <div class="col-sm-6 mt-1 mt-sm-2">
                                                                 <div class="custom-control custom-checkbox mb-3">
-                                                                    <input type="checkbox" class="custom-control-input" id="customCheckBox5" required>
-                                                                    <label class="custom-control-label" for="customCheckBox2">Discapacidad</label>
+                                                                    <input type="checkbox" class="custom-control-input" id="customCheckBox3" required>
+                                                                    <label class="custom-control-label" for="customCheckBox3">Discapacidad</label>
                                                                 </div>
                                                             </div>
                                                             
@@ -724,6 +767,7 @@
                                         </form>
                                     </div>
                                 </div>
+                                <!--Solo si es planillas-->
                                 <div class="tab-pane fade" id="aportaciones">
                                     <div class="pt-4">
                                         <form>
@@ -731,7 +775,7 @@
                                                 <div class="mt-1 col-sm-12 mb-0" >
                                                     <div class="card-body table-active" style="border-radius: 25px;">
                                                         <div class="form-row">
-                                                            <div class="col-sm-4 mt-sm-2">
+                                                            <div class="col-sm-4 mt-2 mt-sm-2">
                                                                 <label>Regimen Pensionario</label>
                                                                 <select class="form-control default-select" id="sel1">
                                                                     <option selected disabled>Seleccione un Regimen</option>
@@ -740,162 +784,116 @@
                                                                     <option>Habitat</option>
                                                                 </select>                                                                        
                                                             </div> 
-                                                            <div class="col-sm-4 mt-sm-2">
-                                                                <div class="custom-control custom-checkbox mb-3">
+                                                            <div class="col-sm-4 mt-2 mt-sm-2">
+                                                                <label>Fecha de Ingreso</label>
+                                                                <input type="date" class="form-control">                                                                   
+                                                            </div> 
+                                                            <div class="col-sm-4 mt-2 mt-sm-2">                      
+                                                                <label>&nbsp;</label>                                          
+                                                                <div class="custom-control custom-checkbox mt-2">
                                                                     <input type="checkbox" class="custom-control-input" id="customCheckBox5" required>
-                                                                    <label class="custom-control-label" for="customCheckBox2">Discapacidad</label>
+                                                                    <label class="custom-control-label" for="customCheckBox5"> Comisión Mixta</label>
                                                                 </div>
                                                             </div>
-                                                            <div class="col-sm-4 mt-sm-2">
+                                                            
+                                                            <div class="col-sm-6 mt-2 mt-sm-2">
+                                                                <label>Nro. CUSPP</label>
+                                                                <input type="text" class="form-control" placeholder="Ingrese el Número de CUSPP">                                                                   
+                                                            </div>                                                           
+                                                            <div class="col-sm-6 mt-2 mt-sm-2">
+                                                                <label>SCTR Pensión</label>
+                                                                <select class="form-control default-select" id="sel1">
+                                                                    <option selected disabled>Seleccione una Opción</option>
+                                                                    <option>SIS Prueba</option>
+                                                                    <option>EPS</option>
+                                                                    <option>ONP</option>
+                                                                </select>                                                                        
+                                                            </div>                                                            
+                                                             
+                                                            <div class="col-sm-4 mt-4 mt-sm-3">
+                                                                <div class="custom-control custom-checkbox mb-3">
+                                                                    <input type="checkbox" class="custom-control-input" id="customCheckBox6" required>
+                                                                    <label class="custom-control-label" for="customCheckBox6">Otros Ingresos de 5ta Categoría</label>
+                                                                </div>
+                                                            </div>                                                             
+                                                            <div class="col-sm-4 mt-4 mt-sm-3">
+                                                                <div class="custom-control custom-checkbox mb-3">
+                                                                    <input type="checkbox" class="custom-control-input" id="customCheckBox8" required>
+                                                                    <label class="custom-control-label" for="customCheckBox8">Renta de 5ta Categoría Exonerada o inafecta</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-sm-4 mt-4 mt-sm-3">
+                                                                <div class="custom-control custom-checkbox mb-3">
+                                                                    <input type="checkbox" class="custom-control-input" id="customCheckBox7" required>
+                                                                    <label class="custom-control-label" for="customCheckBox7">Sindicalizado</label>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-sm-6 mt-2 mt-sm-2">
+                                                                <label>Banco CTS</label>
+                                                                <select class="form-control default-select" id="sel1">
+                                                                    <option selected disabled>Seleccione una Opción</option>
+                                                                    <option>Citibank</option>
+                                                                    <option>Banco del Comercio</option>
+                                                                    <option>Banco Pichincha</option>
+                                                                </select>                                                                        
+                                                            </div> 
+                                                            <div class="col-sm-6 mt-2 mt-sm-2">
                                                                 <label>Nro. Cuenta</label>
                                                                 <input type="text" class="form-control" placeholder="Ingrese el Número de Cuenta">                                                                   
                                                             </div> 
-                                                            <div class="col-sm-4 mt-sm-2">
-                                                                <label>Situación</label>
-                                                                <select class="form-control default-select" id="sel1">
-                                                                    <option selected disabled>Seleccione un Documento</option>
-                                                                    <option>Comas</option>
-                                                                    <option>Carabayllo</option>
-                                                                    <option>Magdalena</option>
-                                                                </select>                                                                        
-                                                            </div>
-                                                            <div class="col-sm-4 mt-sm-2">
-                                                                <label>Centro Costo</label>
-                                                                <select class="form-control default-select" id="sel1">
-                                                                    <option selected disabled>Seleccione un Documento</option>
-                                                                    <option>Comas</option>
-                                                                    <option>Carabayllo</option>
-                                                                    <option>Magdalena</option>
-                                                                </select>                                                                        
-                                                            </div>
-                                                            <div class="col-sm-4 mt-sm-2">
-                                                                <label>Nro. Cuenta</label>
-                                                                <input type="text" class="form-control" placeholder="Ingrese el Número de Cuenta">                                                                   
-                                                            </div> 
-                                                            <div class="col-sm-6 mt-sm-3">
-                                                                <div class="custom-control custom-checkbox mb-3">
-                                                                    <input type="checkbox" class="custom-control-input" id="customCheckBox1" required>
-                                                                    <label class="custom-control-label" for="customCheckBox1">Regimen Alternativo, Acumulativo o Atípico</label>
-                                                                </div>
-                                                            </div> 
-                                                            <div class="col-sm-6 mt-3 mt-sm-3">
-                                                                <div class="custom-control custom-checkbox mb-3">
-                                                                    <input type="checkbox" class="custom-control-input" id="customCheckBox3" required>
-                                                                    <label class="custom-control-label" for="customCheckBox3">Jornada de Trabajo Máxima</label>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-sm-6 mt-sm-3">
-                                                                <div class="custom-control custom-checkbox mb-3">
-                                                                    <input type="checkbox" class="custom-control-input" id="customCheckBox5" required>
-                                                                    <label class="custom-control-label" for="customCheckBox2">Discapacidad</label>
-                                                                </div>
-                                                            </div>
                                                                                                                                                                                    
                                                         </div>
                                                     </div>
                                                 </div> 
+                                                
                                                 <div class="mt-1 col-sm-12 mb-0">
                                                     <div class="card-body table-active" style="border-radius: 25px;">
                                                         <div class="form-row">
-                                                            <div class="col-sm-4 mt-2 mt-sm-2">
-                                                                <label>Fecha Inicio</label>
-                                                                <input type="date" class="form-control">
-                                                            </div>
-                                                            <div class="col-sm-4  mt-2 mt-sm-2">
-                                                                <label>Sueldo</label>
-                                                                <input type="text" class="form-control" placeholder="s/0.00">                                                                   
-                                                            </div> 
-                                                            <div class="col-sm-4  mt-2 mt-sm-2">
-                                                                <label>Por Hora</label>
-                                                                <input disabled type="text" class="form-control" placeholder="s/0.00">                                                                   
+                                                            <div class="col-sm-6 mt-2 mt-sm-2">
+                                                                <label>Regimen Salud</label>
+                                                                <select class="form-control default-select" id="sel1">
+                                                                    <option selected disabled>Seleccione una Opción</option>
+                                                                    <option>ESSALUD PENSIONISTAS</option>
+                                                                    <option>ESSALUD REGULAR</option>
+                                                                </select>                                                                        
                                                             </div> 
                                                             <div class="col-sm-6 mt-2 mt-sm-2">
-                                                                <label>Tipo Pago</label>
-                                                                <select class="form-control default-select" id="sel1">
-                                                                    <option selected>Efectivo</option>
-                                                                    <option>Transferencia</option>
-                                                                </select>                                                                        
-                                                            </div>                                                             
-                                                            <!--Si es transferencia - HACER NGIF-->
-                                                            <div class="col-sm-6 mt-2 mt-sm-2">
-                                                                <label>Banco</label>
-                                                                <select class="form-control default-select" id="sel1">
-                                                                    <option selected>Bbva</option>
-                                                                    <option>Bcp</option>
-                                                                </select>                                                                        
+                                                                <label>Fecha de Ingreso</label>
+                                                                <input type="date" class="form-control">                                                                   
+                                                            </div> 
+                                                             
+                                                            <div class="col-sm-4 mt-2 mt-sm-2">
+                                                                <label>Nro. EsSalud</label>
+                                                                <input type="text" class="form-control" placeholder="Nro. EsSalud">                                                                   
                                                             </div> 
                                                             <div class="col-sm-4 mt-2 mt-sm-2">
-                                                                <label>Cuenta</label>
+                                                                <label>SCTR Salud</label>
                                                                 <select class="form-control default-select" id="sel1">
-                                                                    <option selected disabled>Tipo de Cuenta</option>
-                                                                    <option>Ahorro</option>
-                                                                    <option>Corriente</option>
-                                                                </select>                                                                        
-                                                            </div> 
-                                                            <div class="col-sm-4 mt-2 mt-sm-2">
-                                                                <label>Moneda</label>
-                                                                <select class="form-control default-select" id="sel1">
-                                                                    <option selected disabled>Tipo de Moneda</option>
-                                                                    <option>Soles</option>
-                                                                    <option>Dolar</option>
+                                                                    <option selected disabled>Seleccione un Regimen</option>
+                                                                    <option>ONP</option>
+                                                                    <option>SIS Prueba</option>
+                                                                    <option>Eps</option>
                                                                 </select>                                                                        
                                                             </div>
-                                                            <div class="col-sm-4  mt-2 mt-sm-2">
-                                                                <label>Nro. Cuenta</label>
-                                                                <input type="text" class="form-control" placeholder="Ingrese el Número de Cuenta">                                                                   
-                                                            </div> 
-                                                            <div class="col-sm-6  mt-2 mt-sm-2">
-                                                                <label>Nro. CCI</label>
-                                                                <input type="text" class="form-control" placeholder="Ingrese el Número de CCI">                                                                   
-                                                            </div>   
-                                                            <!--Fin Si es transferencia-->  
-                                                            <div class="col-sm-6 mt-2 mt-sm-2">
-                                                                <label>Movilidad</label>
-                                                                <input type="text" class="form-control" placeholder="s/0.00">                                                                   
-                                                            </div>                                                           
+                                                            <div class="col-sm-4 mt-2 mt-sm-2">                      
+                                                                <label>&nbsp;</label>                                          
+                                                                <div class="custom-control custom-checkbox mt-2">
+                                                                    <input type="checkbox" class="custom-control-input" id="customCheckBox8" required>
+                                                                    <label class="custom-control-label" for="customCheckBox8"> EsSalud + Vida</label>
+                                                                </div>
+                                                            </div>
+                                                                                                                     
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <div class="mt-2 col-sm-12 mb-0">
-                                                    <div class="card-body table-active" style="border-radius: 25px;">
-                                                        <div class="form-row">    
-                                                            <div class="col-sm-6 mt-1 mt-sm-2">
-                                                                <div class="custom-control custom-checkbox mb-3">
-                                                                    <input type="checkbox" class="custom-control-input" id="customCheckBox1" required>
-                                                                    <label class="custom-control-label" for="customCheckBox1">Regimen Alternativo, Acumulativo o Atípico</label>
-                                                                </div>
-                                                            </div> 
-                                                            <div class="col-sm-6 mt-1 mt-sm-2">
-                                                                <div class="custom-control custom-checkbox mb-3">
-                                                                    <input type="checkbox" class="custom-control-input" id="customCheckBox3" required>
-                                                                    <label class="custom-control-label" for="customCheckBox3">Jornada de Trabajo Máxima</label>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-sm-6 mt-1 mt-sm-2">
-                                                                <div class="custom-control custom-checkbox mb-3">
-                                                                    <input type="checkbox" class="custom-control-input" id="customCheckBox5" required>
-                                                                    <label class="custom-control-label" for="customCheckBox2">Discapacidad</label>
-                                                                </div>
-                                                            </div>
-                                                            
-                                                            <div class="col-sm-6 mt-1 mt-sm-2">
-                                                                <div class="custom-control custom-checkbox mb-3">
-                                                                    <input type="checkbox" class="custom-control-input" id="customCheckBox4" required>
-                                                                    <label class="custom-control-label" for="customCheckBox4">Horario Nocturno</label>
-                                                                </div>
-                                                            </div>                                                       
-                                                                                                                        
-                                                        </div>
-                                                    </div>
-                                                </div>   
+                                                </div>                                                
                                             </div>                                                 
                                         </form>
                                     </div>
                                 </div>
+                                <!--Solo si es planillas-->
                             </div>
                         </div>
-                                    
-                          
                         <!--Fin Tab-->
                     </div>
                 </div>

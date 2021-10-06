@@ -1,0 +1,248 @@
+<div class="container-fluid">
+    <div class="page-titles">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:void(0)">Configuración</a></li>
+            <li class="breadcrumb-item active"><a href="javascript:void(0)">Puesto</a></li>
+        </ol>
+    </div>
+    
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header">                
+                <div class="mr-auto pr-3 mt-0">
+                    <h4 class="card-title mr-auto pr-3 mt-3">Lista</h4>
+                </div>
+                
+                <div class="input-group mt-0 diet-search mr-4">
+                    <input type="text" class="form-control" placeholder="Search Menus here">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-primary mt-0" data-toggle="modal" data-target=".mcpa">Nuevo Puesto
+                    <span class="btn-icon-right">
+                            <i class="fa fa-plus"></i>
+                    </span>
+                </button>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-hover table-sm mb-0 table-responsive-lg text-black">
+                        <thead>
+                            <tr>                                
+                                <th class="align-middle">Nombre</th>
+                                <th class="align-middle pr-7">Área</th>
+                                <th class="align-middle minw200">Categoria</th>
+                                <th class="align-middle">Proyección Cargo</th>	
+                                <th class="align-middle">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody id="orders">
+                            <tr class="btn-reveal-trigger" *ngFor="let lista of CurrentPerfil | paginate: { itemsPerPage: 5, currentPage: p }">                               
+                               
+                                <td class="py-2">
+                                     <strong>CEO</strong>                                   
+                                </td>
+                                <td class="py-2">Gerencial General</td>
+                                <td class="py-2">General</td>
+                                <td class="py-2">No Asignado</td>
+                                <td>
+                                    <div class="d-flex">
+                                        <a class="btn btn-primary shadow btn-xs sharp mr-1" data-toggle="modal" data-target=".mcpe"><i class="fa fa-pencil"></i></a>
+                                        <a class="btn btn-danger shadow btn-xs sharp" data-toggle="modal" data-target="#mcpace"><i class="fa fa-trash"></i></a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="btn-reveal-trigger">
+                                
+                                <td class="py-2">
+                                    <strong>RRHH</strong>                             
+                                </td>
+                                <td class="py-2">Gerencial General</td>
+                                <td class="py-2">Especializado</td>
+                                <td class="py-2">CEO</td>                                
+                                <td>
+                                    <div class="d-flex">
+                                        <a class="btn btn-primary shadow btn-xs sharp mr-1" data-toggle="modal" data-target=".mcpe"><i class="fa fa-pencil"></i></a>
+                                        <a class="btn btn-danger shadow btn-xs sharp" data-toggle="modal" data-target="#mcpace"><i class="fa fa-trash"></i></a>
+                                    </div>
+                                </td>
+                            </tr>
+                            
+                            <pagination-controls (pageChange)="p = $event" previousLabel="" nextLabel="" ></pagination-controls>
+                                                       
+                        </tbody>
+                    </table> 
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Agregar Puesto-->
+    <div class="modal fade mcpa" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Registrar Puesto</h5>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">                           
+                    <div class="basic-form">
+                        <form>                            
+                            <div class="form-group row">
+                                <label class="col-sm-6 col-form-label">Nombre del Puesto :</label>                                
+                                <input type="text" class="col-sm-6 form-control" placeholder="Ingrese el nombre del puesto">                                   
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-6 col-form-label">Área Departamento Empresa :</label>
+                                <select class="col-sm-6 form-control" id="sel1">
+                                    <option selected disabled>Seleccione un Área</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>                                         
+                                
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-6 col-form-label">Categoría :</label>
+                                <select class="col-sm-6 form-control" id="sel1">
+                                    <option selected disabled>Seleccione una Categoría</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-6 col-form-label">Proyección Cargo :</label>
+                                <select class="col-sm-6 form-control" id="sel1">
+                                    <option selected disabled>Seleccione una Proyección</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </div>                              
+                        </form>
+                    </div>   
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger light" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mcpac">Actualizar</button>
+                </div>
+            </div>
+        </div>               
+    </div>
+    <!-- /# Fin Modal Agregar Puesto -->  
+    <!-- Modal Confirmación Agregar Puesto-->    
+    <div class="modal fade" id="mcpac">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Confirmar</h5>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">¿Desea Registrar el Puesto del Área de Empresa?</div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger light" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary">Confirmar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Fin Modal Confirmación Agregar Puesto-->  
+    
+    <!-- Modal Actualizar Puesto-->
+    <div class="modal fade mcpe" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Actualizar Puesto</h5>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">                           
+                    <div class="basic-form">
+                        <form>                            
+                            <div class="form-group row">
+                                <label class="col-sm-6 col-form-label">Nombre del Puesto :</label>                                
+                                <input type="text" class="col-sm-6 form-control" placeholder="Ingrese el nombre del puesto">                                   
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-6 col-form-label">Área Departamento Empresa :</label>
+                                <select class="col-sm-6 form-control" id="sel1">
+                                    <option selected disabled>Seleccione un Área</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>                                         
+                                
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-6 col-form-label">Categoría :</label>
+                                <select class="col-sm-6 form-control" id="sel1">
+                                    <option selected disabled>Seleccione una Categoría</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-sm-6 col-form-label">Proyección Cargo :</label>
+                                <select class="col-sm-6 form-control" id="sel1">
+                                    <option selected disabled>Seleccione una Proyección</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </div>                              
+                        </form>
+                    </div>   
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger light" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mcpec">Actualizar</button>
+                </div>
+            </div>
+        </div>               
+    </div>
+    <!-- /# Fin Modal Actualizar Puesto -->  
+    <!-- Modal Confirmación Actualizar Puesto-->    
+    <div class="modal fade" id="mcpec">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Confirmar</h5>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">¿Desea Actualizar el Puesto del Área de Empresa?</div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger light" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary">Confirmar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Fin Modal Confirmación Actualizar Puesto-->  
+
+    <!-- Modal Confirmación Eliminar Puesto-->    
+    <div class="modal fade" id="mcpace">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Confirmar</h5>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">¿Desea Eliminar el Puesto del Área de Empresa?</div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger light" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary">Confirmar</button>
+                </div>
+            </div>
+        </div>
+    </div>  
+    <!--Fin Modal Confirmación Eliminar Puesto-->   
+    
+</div>

@@ -1,0 +1,306 @@
+<div class="container-fluid">
+    <div class="page-titles">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:void(0)">Configuración</a></li>
+            <li class="breadcrumb-item active"><a href="javascript:void(0)">Descuentos</a></li>
+        </ol>
+    </div>
+
+    <div class="col-xl-12">
+        <div class="card">            
+            <div class="card-body">
+                <ul class="nav nav-pills mb-4">
+                    <li (click)="this.ViewButtonDescuento(1)" class=" nav-item">
+                        <a href="#navActivoD" class="nav-link active" data-toggle="tab" aria-expanded="false">Activo</a>
+                    </li>
+                    <li (click)="this.ViewButtonDescuento(2)" class="nav-item mr-auto">
+                        <a href="#navInactivoD" class="nav-link" data-toggle="tab" aria-expanded="false">Inactivo</a>
+                    </li>   
+                    <li class="nav-item">
+                        <div class="input-group mt-0 diet-search mr-4">
+                            <input type="text" class="form-control" placeholder="Buscar Aquí">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                    </li>                                                 
+                    <li *ngIf="this.viewNuevoDescuento" class="nav-item">
+                        <button type="button" class="btn btn-primary mt-0" data-toggle="modal" data-target=".mdad">Nuevo Descuento
+                            <span class="btn-icon-right">
+                                    <i class="fa fa-plus color-info"></i>
+                            </span>
+                        </button>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div id="navActivoD" class="tab-pane active">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="card-body">                
+                                    <div class="table-responsive">
+                                        <table class="table table-hover table-sm mb-0 table-responsive-lg text-black">
+                                            <thead>
+                                                <tr class="text-center">                                
+                                                    <th class="align-middle">Nombre</th>
+                                                    <th class="align-middle">Tipo de Descuento</th>
+                                                    <th class="align-middle">Acciones</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="orders">
+                                                <tr class="btn-reveal-trigger text-center" *ngFor="let lista of CurrentPerfil | paginate: { itemsPerPage: 5, currentPage: p }">                               
+                                                   
+                                                    <td class="py-2">
+                                                         <strong>CEO</strong>                                   
+                                                    </td>
+                                                    <td class="py-2">Fórmula</td>                                                                 
+                                                    <td class="py-2">
+                                                        <a class="mr-2" data-toggle="modal" data-target=".mded" style="cursor: pointer;">
+                                                            <span class="badge badge-primary light"> Editar <i class="fa fa-pencil"></i> </span>
+                                                        </a>  
+                                                        <a data-toggle="modal" data-target="#mddc" style="cursor: pointer;">
+                                                            <span class="badge badge-danger light"> Desactivar <i class="fa fa-ban"></i> </span>
+                                                        </a>  
+                                                    </td>
+                                                </tr>
+                                                <tr class="btn-reveal-trigger text-center">                                                    
+                                                    <td class="py-2">
+                                                        <strong>RRHH</strong>                             
+                                                    </td>
+                                                    <td class="py-2">Monto Fijo</td>   
+                                                    <td class="py-2">
+                                                        <a class="mr-2" data-toggle="modal" data-target=".mded" style="cursor: pointer;">
+                                                            <span class="badge badge-primary light"> Editar <i class="fa fa-pencil"></i> </span>
+                                                        </a>  
+                                                        <a data-toggle="modal" data-target="#mddc" style="cursor: pointer;">
+                                                            <span class="badge badge-danger light"> Desactivar <i class="fa fa-ban"></i> </span>
+                                                        </a>  
+                                                    </td>
+                                                </tr>
+                                                
+                                                <pagination-controls (pageChange)="p = $event" previousLabel="" nextLabel="" ></pagination-controls>
+                                                                           
+                                            </tbody>
+                                        </table> 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="navInactivoD" class="tab-pane">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="card-body">                
+                                    <div class="table-responsive">
+                                        <table class="table table-hover table-sm mb-0 table-responsive-lg text-black">
+                                            <thead>
+                                                <tr class="text-center">                                
+                                                    <th class="align-middle">Nombre</th>
+                                                    <th class="align-middle">Tipo de Descuento</th>
+                                                    <th class="align-middle">Acciones</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="orders">
+                                                <tr class="btn-reveal-trigger text-center" *ngFor="let lista of CurrentPerfil | paginate: { itemsPerPage: 5, currentPage: p }">                               
+                                                   
+                                                    <td class="py-2">
+                                                         <strong>CEO</strong>                                   
+                                                    </td>
+                                                    <td class="py-2">Fórmula</td>                                                                 
+                                                    <td class="py-2">
+                                                        <a class="mr-2" data-toggle="modal" data-target=".mded" style="cursor: pointer;">
+                                                            <span class="badge badge-primary light"> Editar <i class="fa fa-pencil"></i> </span>
+                                                        </a>  
+                                                        <a data-toggle="modal" data-target="#mdac" style="cursor: pointer;">
+                                                            <span class="badge badge-success light"> Activar <i class="fa fa-refresh"></i> </span>
+                                                        </a>  
+                                                    </td>
+                                                </tr>
+                                                <tr class="btn-reveal-trigger text-center">                                                    
+                                                    <td class="py-2">
+                                                        <strong>RRHH</strong>                             
+                                                    </td>
+                                                    <td class="py-2">Monto Fijo</td>   
+                                                    <td class="py-2">
+                                                        <a class="mr-2" data-toggle="modal" data-target=".mded" style="cursor: pointer;">
+                                                            <span class="badge badge-primary light"> Editar <i class="fa fa-pencil"></i> </span>
+                                                        </a>  
+                                                        <a data-toggle="modal" data-target="#mdac" style="cursor: pointer;">
+                                                            <span class="badge badge-success light"> Activar <i class="fa fa-refresh"></i> </span>
+                                                        </a>  
+                                                    </td>
+                                                </tr>
+                                                
+                                                <pagination-controls (pageChange)="p = $event" previousLabel="" nextLabel="" ></pagination-controls>
+                                                                           
+                                            </tbody>
+                                        </table> 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Agregar Descuento-->
+    <div class="modal fade mdad" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Registrar Descuento</h5>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">                           
+                    <div class="basic-form">
+                        <form>                            
+                            <div class="form-row">                                  
+                                <div class="col-sm-12 mt-2 mt-sm-2 mb-2">
+                                    <label>&nbsp;Nombre :</label>
+                                    <input type="text" class="form-control" placeholder="Agregue un nombre">                                                                                                           
+                                </div>  
+                                <div class="col-sm-12 mt-2 mt-sm-2 mb-2">
+                                    <label>&nbsp;Tipo Descuento :</label>
+                                    <select class="form-control" id="sel1"><!--default-select-->
+                                        <option selected disabled>Selecciona un tipo</option>
+                                        <option>Monto Fijo</option>
+                                        <option>Fórmula</option>                                         
+                                    </select>                                                                        
+                                </div>
+                                <div class="col-sm-12 mt-2 mt-sm-2 mb-2">
+                                    <label>&nbsp;Monto :</label>
+                                    <input type="text" class="form-control" placeholder="Agregue un monto">                                                                                                           
+                                </div>                                        
+                            </div>                                                                             
+                        </form>
+                    </div>      
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger light" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mdadc">Actualizar</button>
+                </div>
+            </div>
+        </div>               
+    </div>
+    <!-- /# Fin Agregar Descuento --> 
+
+    <!-- Modal Confirmación Agregar Descuento-->    
+    <div class="modal fade" id="mdadc">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Confirmar</h5>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">¿Desea Registrar el Descuento?</div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger light" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary">Confirmar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Fin Modal Confirmación Agregar Descuento--> 
+
+    <!-- Modal Editar Descuento-->
+    <div class="modal fade mded" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Editar Descuento</h5>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">                           
+                    <div class="basic-form">
+                        <form>                            
+                            <div class="form-row">                                  
+                                <div class="col-sm-12 mt-2 mt-sm-2 mb-2">
+                                    <label>&nbsp;Nombre :</label>
+                                    <input type="text" class="form-control" placeholder="Agregue un nombre">                                                                                                           
+                                </div>  
+                                <div class="col-sm-12 mt-2 mt-sm-2 mb-2">
+                                    <label>&nbsp;Tipo Descuento :</label>
+                                    <select class="form-control" id="sel1"><!--default-select-->
+                                        <option selected disabled>Selecciona un tipo</option>
+                                        <option>Monto Fijo</option>
+                                        <option>Fórmula</option>                                         
+                                    </select>                                                                        
+                                </div>
+                                <div class="col-sm-12 mt-2 mt-sm-2 mb-2">
+                                    <label>&nbsp;Monto :</label>
+                                    <input type="text" class="form-control" placeholder="Agregue un monto">                                                                                                           
+                                </div>                                        
+                            </div>                                                                             
+                        </form>
+                    </div>      
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger light" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mdedc">Actualizar</button>
+                </div>
+            </div>
+        </div>               
+    </div>
+    <!-- /# Fin Modal Editar Descuento --> 
+
+    <!-- Modal Confirmación Editar Descuento-->    
+    <div class="modal fade" id="mdedc">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Confirmar</h5>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">¿Desea Registrar el Descuento?</div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger light" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary">Confirmar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Fin Modal Confirmación Editar Descuento--> 
+
+    <!-- Modal Confirmación Desactivar-->    
+    <div class="modal fade" id="mddc">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Confirmar</h5>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">¿Desea Desactivar el Descuento?</div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger light" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary">Confirmar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Fin Modal Confirmación Desactivar--> 
+
+    <!-- Modal Confirmación Activar-->    
+    <div class="modal fade" id="mdac">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Confirmar</h5>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">¿Desea Activar el Descuento?</div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger light" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary">Confirmar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Fin Modal Confirmación Activar--> 
+</div>

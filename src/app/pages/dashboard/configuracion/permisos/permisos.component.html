@@ -1,0 +1,297 @@
+<div class="container-fluid">
+    <div class="page-titles">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:void(0)">Configuración</a></li>
+            <li class="breadcrumb-item active"><a href="javascript:void(0)">Permisos</a></li>
+        </ol>
+    </div>
+    
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header">                
+                <div class="mr-auto pr-3 mt-0">
+                    <h4 class="card-title mr-auto pr-3 mt-3">Lista de Permisos</h4>
+                </div>                
+               
+                <button type="button" class="btn btn-primary mt-0" data-toggle="modal" data-target=".mpap">Nuevo Permiso
+                    <span class="btn-icon-right">
+                            <i class="fa fa-plus"></i>
+                    </span>
+                </button>
+            </div>
+
+            <div class="card-body">
+                <div class="row">
+                    <div class="card col-lg-12">
+                        <div class="card-header">
+                            <h4 class="card-title">Permisos Activos</h4>
+                            <div class="input-group mt-0 diet-search mr-4">
+                                <input type="text" class="form-control" placeholder="Search Menus here">
+                                <div class="input-group-append">
+                                    <button class="btn btn-primary" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-hover table-sm mb-0 table-responsive-lg text-black">
+                                    <thead>
+                                        <tr>                                
+                                            <th class="align-middle">Descripción</th>
+                                            <th class="align-middle pr-7">Días de Permiso</th>
+                                            <th class="align-middle minw200">Estado</th>	
+                                            <th class="align-middle">Acciones</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="orders">
+                                        <tr class="btn-reveal-trigger" *ngFor="let lista of CurrentPerfil | paginate: { itemsPerPage: 5, currentPage: p }">                               
+                                           
+                                            <td class="py-2">
+                                                 <strong>Paternidad Caso Parto Normal/Cesárea</strong>                                   
+                                            </td>
+                                            <td class="py-2">10 días</td>
+                                            <td class="py-2">
+                                                <span class="badge badge-success light">Activo</span>
+                                            </td>
+                                            <td>
+                                                <div class="d-flex">
+                                                    <a class="btn btn-primary shadow btn-xs sharp mr-1" data-toggle="modal" data-target=".mpaap"><i class="fa fa-pencil"></i></a>
+                                                    <a class="btn btn-danger shadow btn-xs sharp" data-toggle="modal" data-target="#mpape"><i class="fa fa-trash"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="btn-reveal-trigger">
+                                            
+                                            <td class="py-2">
+                                                <strong>Fallecimiento</strong>                             
+                                            </td>
+                                            <td class="py-2">5 días</td>
+                                            <td class="py-2">
+                                                <span class="badge badge-success light">Activo</span>
+                                            </td>                                
+                                            <td>
+                                                <div class="d-flex">
+                                                    <a class="btn btn-primary shadow btn-xs sharp mr-1" data-toggle="modal" data-target=".mpaap"><i class="fa fa-pencil"></i></a>
+                                                    <a class="btn btn-danger shadow btn-xs sharp" data-toggle="modal" data-target="#mpape"><i class="fa fa-trash"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        
+                                        <pagination-controls (pageChange)="p = $event" previousLabel="" nextLabel="" ></pagination-controls>
+                                                                   
+                                    </tbody>
+                                </table> 
+                            </div>                    
+                        </div>
+                    </div>
+                    <div class="card col-lg-12">
+                        <div class="card-header">
+                            <h4 class="card-title">Permisos Inactivos</h4>
+                            <div class="input-group mt-0 diet-search mr-4">
+                                <input type="text" class="form-control" placeholder="Search Menus here">
+                                <div class="input-group-append">
+                                    <button class="btn btn-primary" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-hover table-sm mb-0 table-responsive-lg text-black">
+                                    <thead>
+                                        <tr>                                
+                                            <th class="align-middle">Descripción</th>
+                                            <th class="align-middle pr-7">Días de Permiso</th>
+                                            <th class="align-middle minw200">Estado</th>	
+                                            <th class="align-middle">Acciones</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="orders">
+                                        <tr class="btn-reveal-trigger" *ngFor="let lista of CurrentPerfil | paginate: { itemsPerPage: 5, currentPage: p }">                               
+                                           
+                                            <td class="py-2">
+                                                 <strong>Paternidad Caso Parto Normal/Cesárea</strong>                                   
+                                            </td>
+                                            <td class="py-2">10 días</td>
+                                            <td class="py-2">
+                                                <span class="badge badge-danger light">Inactivo</span>
+                                            </td>
+                                            <td>
+                                                <div class="d-flex">
+                                                    <a class="btn btn-primary shadow btn-xs sharp mr-1" data-toggle="modal" data-target=".mpaap"><i class="fa fa-pencil"></i></a>
+                                                    <a class="btn btn-danger shadow btn-xs sharp" data-toggle="modal" data-target="#mpape"><i class="fa fa-trash"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="btn-reveal-trigger">
+                                            
+                                            <td class="py-2">
+                                                <strong>Fallecimiento</strong>                             
+                                            </td>
+                                            <td class="py-2">5 días</td>
+                                            <td class="py-2">
+                                                <span class="badge badge-danger light">Inactivo</span>
+                                            </td>                                
+                                            <td>
+                                                <div class="d-flex">
+                                                    <a class="btn btn-primary shadow btn-xs sharp mr-1" data-toggle="modal" data-target=".mpaap"><i class="fa fa-pencil"></i></a>
+                                                    <a class="btn btn-danger shadow btn-xs sharp" data-toggle="modal" data-target="#mpape"><i class="fa fa-trash"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        
+                                        <pagination-controls (pageChange)="p = $event" previousLabel="" nextLabel="" ></pagination-controls>
+                                                                   
+                                    </tbody>
+                                </table> 
+                            </div>                    
+                        </div>        
+                    </div>
+                    
+                </div>
+            </div>
+
+                      
+            
+        </div>
+    </div>
+
+    <!-- Modal Agregar Permiso-->
+    <div class="modal fade mpap" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Registrar Tipo de Permiso</h5>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">                           
+                    <div class="basic-form">
+                        <form>                            
+                            <div class="form-row">                                  
+                                <div class="col-sm-12 mt-2 mt-sm-2 mb-2">
+                                    <label>&nbsp;Descripción del tipo :</label>
+                                    <input type="text" class="form-control" placeholder="Agregue un nombre">                                                                                                           
+                                </div>  
+                                <div class="col-sm-12 mt-2 mt-sm-2 mb-2">
+                                    <label>&nbsp;Días de Permiso :</label>
+                                    <input type="text" class="form-control" placeholder="Agregue un monto">                                                                                                           
+                                </div>   
+                                <div class="col-sm-12 mt-2 mt-sm-2 mb-2">
+                                    <label>&nbsp;Estado :</label>
+                                    <select class="form-control" id="sel1"><!--default-select-->
+                                        <option selected disabled>Selecciona un tipo</option>
+                                        <option>Activo</option>
+                                        <option>Inactivo</option>                                         
+                                    </select>                                                                        
+                                </div>                            
+                            </div>                                                                             
+                        </form>
+                    </div>      
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger light" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mpapc">Actualizar</button>
+                </div>
+            </div>
+        </div>               
+    </div>
+    <!-- /# Fin Agregar Permiso --> 
+    <!-- Modal Confirmación Agregar Permiso-->    
+    <div class="modal fade" id="mpapc">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Confirmar</h5>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">¿Desea registrar el Tipo de Permiso?</div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger light" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary">Confirmar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Fin Modal Confirmación Agregar Permiso-->  
+    
+    <!-- Modal Actualizar Permiso-->
+    <div class="modal fade mpaap" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Actualizar Tipo de Permiso</h5>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">                           
+                    <div class="basic-form">
+                        <form>                            
+                            <div class="form-row">                                  
+                                <div class="col-sm-12 mt-2 mt-sm-2 mb-2">
+                                    <label>&nbsp;Descripción del tipo :</label>
+                                    <input type="text" class="form-control" placeholder="Agregue un nombre">                                                                                                           
+                                </div>  
+                                <div class="col-sm-12 mt-2 mt-sm-2 mb-2">
+                                    <label>&nbsp;Días de Permiso :</label>
+                                    <input type="text" class="form-control" placeholder="Agregue un monto">                                                                                                           
+                                </div>   
+                                <div class="col-sm-12 mt-2 mt-sm-2 mb-2">
+                                    <label>&nbsp;Estado :</label>
+                                    <select class="form-control" id="sel1"><!--default-select-->
+                                        <option selected disabled>Selecciona un tipo</option>
+                                        <option>Activo</option>
+                                        <option>Inactivo</option>                                         
+                                    </select>                                                                        
+                                </div>                            
+                            </div>                                                                             
+                        </form>
+                    </div>      
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger light" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mpaapc">Actualizar</button>
+                </div>
+            </div>
+        </div>               
+    </div>
+    <!-- /# Fin Actualizar Permiso --> 
+     <!-- Modal Confirmación Actualizar Permiso-->    
+     <div class="modal fade" id="mpaapc">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Confirmar</h5>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">¿Desea actualizar el Tipo de Permiso?</div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger light" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary">Confirmar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Fin Modal Confirmación Actualizar Permiso-->  
+
+    <!-- Modal Confirmación Eliminar Permiso-->    
+    <div class="modal fade" id="mpape">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Confirmar</h5>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">¿Desea Eliminar el Tipo de Permiso?</div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger light" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary">Confirmar</button>
+                </div>
+            </div>
+        </div>
+    </div>  
+    <!--Fin Modal Confirmación Eliminar Permiso-->   
+    
+</div>

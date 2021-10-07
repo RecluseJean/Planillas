@@ -1,0 +1,370 @@
+<div class="container-fluid">
+    <div class="page-titles">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:void(0)">Configuración</a></li>
+            <li class="breadcrumb-item active"><a href="javascript:void(0)">Remuneración</a></li>
+        </ol>
+    </div>
+
+    <div class="col-xl-12">
+        <div class="card">            
+            <div class="card-body">
+                <ul class="nav nav-pills mb-4">
+                    <li (click)="this.ViewButtonRemuneracion(1)" class=" nav-item">
+                        <a href="#navActivoD" class="nav-link active" data-toggle="tab" aria-expanded="false">Activo</a>
+                    </li>
+                    <li (click)="this.ViewButtonRemuneracion(2)" class="nav-item mr-auto">
+                        <a href="#navInactivoD" class="nav-link" data-toggle="tab" aria-expanded="false">Inactivo</a>
+                    </li>   
+                    <li class="nav-item">
+                        <div class="input-group mt-0 diet-search mr-4">
+                            <input type="text" class="form-control" placeholder="Buscar Aquí">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                    </li>                                                 
+                    <li *ngIf="this.viewNuevaRemuneracion" class="nav-item">
+                        <button type="button" class="btn btn-primary mt-0" data-toggle="modal" data-target=".mrar">Nuevo Descuento
+                            <span class="btn-icon-right">
+                                    <i class="fa fa-plus color-info"></i>
+                            </span>
+                        </button>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div id="navActivoD" class="tab-pane active">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="card-body">                
+                                    <div class="table-responsive">
+                                        <table class="table table-hover table-sm mb-0 table-responsive-lg text-black">
+                                            <thead>
+                                                <tr class="text-center">                                
+                                                    <th class="align-middle">Nombre</th>
+                                                    <th class="align-middle">Tipo de Remuneración</th>
+                                                    <th class="align-middle">Descripción</th>
+                                                    <th class="align-middle">Afecto descuento</th>
+                                                    <th class="align-middle">Archivo Pago</th>
+                                                    <th class="align-middle">Acciones</th>					
+                                                </tr>
+                                            </thead>
+                                            <tbody id="orders">
+                                                <tr class="btn-reveal-trigger text-center" *ngFor="let lista of CurrentPerfil | paginate: { itemsPerPage: 5, currentPage: p }">                               
+                                                    <td class="py-2">
+                                                         <strong>Remuneración</strong>                                   
+                                                    </td>
+                                                    <td class="py-2">Monto Fijo</td>                                                                 
+                                                    <td class="py-2">1200</td>                                                                 
+                                                    <td class="py-2">SI</td>                                                                 
+                                                    <td class="py-2">
+                                                        <a data-toggle="modal" data-target="#mrap" style="cursor: pointer;">
+                                                            <span class="badge badge-secondary light"> Archivo Pago <i class="fa fa-file"></i> </span>
+                                                        </a>  
+                                                    </td>                                                                
+  
+                                                    <td class="py-2">
+                                                        <a class="mr-2" data-toggle="modal" data-target=".mrer" style="cursor: pointer;">
+                                                            <span class="badge badge-primary light"> Editar <i class="fa fa-pencil"></i> </span>
+                                                        </a>  
+                                                        <a data-toggle="modal" data-target="#mrdesactiva" style="cursor: pointer;">
+                                                            <span class="badge badge-danger light"> Desactivar <i class="fa fa-ban"></i> </span>
+                                                        </a>  
+                                                    </td>
+                                                </tr>
+                                                <tr class="btn-reveal-trigger text-center">                                                    
+                                                    <td class="py-2">
+                                                        <strong>Remuneración</strong>                                   
+                                                    </td>
+                                                    <td class="py-2">Fórmula</td>                                                                 
+                                                    <td class="py-2"> - </td>                                                                 
+                                                    <td class="py-2">NO</td>                                                                 
+                                                    <td class="py-2">
+                                                        <a data-toggle="modal" data-target="#mrap" style="cursor: pointer;">
+                                                            <span class="badge badge-secondary light"> Archivo Pago <i class="fa fa-file"></i> </span>
+                                                        </a>
+                                                    </td>   
+                                                    <td class="py-2">
+                                                        <a class="mr-2" data-toggle="modal" data-target=".mrer" style="cursor: pointer;">
+                                                            <span class="badge badge-primary light"> Editar <i class="fa fa-pencil"></i> </span>
+                                                        </a>  
+                                                        <a data-toggle="modal" data-target="#mrdesactiva" style="cursor: pointer;">
+                                                            <span class="badge badge-danger light"> Desactivar <i class="fa fa-ban"></i> </span>
+                                                        </a>  
+                                                    </td>
+                                                </tr>
+                                                
+                                                <pagination-controls (pageChange)="p = $event" previousLabel="" nextLabel="" ></pagination-controls>                                                                           
+                                            </tbody>
+                                        </table> 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="navInactivoD" class="tab-pane">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="card-body">                
+                                    <div class="table-responsive">
+                                        <table class="table table-hover table-sm mb-0 table-responsive-lg text-black">
+                                            <thead>
+                                                <tr class="text-center">                                
+                                                    <th class="align-middle">Nombre</th>
+                                                    <th class="align-middle">Tipo de Remuneración</th>
+                                                    <th class="align-middle">Descripción</th>
+                                                    <th class="align-middle">Afecto descuento</th>
+                                                    <th class="align-middle">Archivo Pago</th>
+                                                    <th class="align-middle">Acciones</th>	
+                                                </tr>
+                                            </thead>
+                                            <tbody id="orders">
+                                                <tr class="btn-reveal-trigger text-center" *ngFor="let lista of CurrentPerfil | paginate: { itemsPerPage: 5, currentPage: p }">                               
+                                                   
+                                                    <td class="py-2">
+                                                        <strong>Remuneración</strong>                                   
+                                                    </td>
+                                                    <td class="py-2">Fórmula</td>                                                                 
+                                                    <td class="py-2"> - </td>                                                                 
+                                                    <td class="py-2">NO</td>                                                                 
+                                                    <td class="py-2">
+                                                        <a data-toggle="modal" data-target="#mrap" style="cursor: pointer;">
+                                                            <span class="badge badge-secondary light"> Archivo Pago <i class="fa fa-file"></i> </span>
+                                                        </a>
+                                                    </td>                                                                 
+                                                    <td class="py-2">
+                                                        <a class="mr-2" data-toggle="modal" data-target=".mrer" style="cursor: pointer;">
+                                                            <span class="badge badge-primary light"> Editar <i class="fa fa-pencil"></i> </span>
+                                                        </a>  
+                                                        <a data-toggle="modal" data-target="#mractiva" style="cursor: pointer;">
+                                                            <span class="badge badge-success light"> Activar <i class="fa fa-refresh"></i> </span>
+                                                        </a>  
+                                                    </td>
+                                                </tr>
+                                                <tr class="btn-reveal-trigger text-center">                                                    
+                                                    <td class="py-2">
+                                                        <strong>Remuneración</strong>                                   
+                                                    </td>
+                                                    <td class="py-2">Monto Fijo</td>                                                                 
+                                                    <td class="py-2">1200</td>                                                                 
+                                                    <td class="py-2">SI</td>                                                                 
+                                                    <td>
+                                                        <a data-toggle="modal" data-target="#mrap" style="cursor: pointer;">
+                                                            <span class="badge badge-secondary light"> Archivo Pago <i class="fa fa-file"></i> </span>
+                                                        </a>
+                                                    </td>
+                                                    <td class="py-2">
+                                                        <a class="mr-2" data-toggle="modal" data-target=".mrer" style="cursor: pointer;">
+                                                            <span class="badge badge-primary light"> Editar <i class="fa fa-pencil"></i> </span>
+                                                        </a>  
+                                                        <a data-toggle="modal" data-target="#mractiva" style="cursor: pointer;">
+                                                            <span class="badge badge-success light"> Activar <i class="fa fa-refresh"></i> </span>
+                                                        </a>  
+                                                    </td>
+                                                </tr>
+                                                
+                                                <pagination-controls (pageChange)="p = $event" previousLabel="" nextLabel="" ></pagination-controls>
+                                                                           
+                                            </tbody>
+                                        </table> 
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Agregar Remuneración-->
+    <div class="modal fade mrar" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Registrar Remuneración</h5>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">                           
+                    <div class="basic-form">
+                        <form>                            
+                            <div class="form-row">                                  
+                                <div class="col-sm-12 mt-2 mt-sm-2 mb-2">
+                                    <label>&nbsp;Nombre :</label>
+                                    <input type="text" class="form-control" placeholder="Agregue un nombre">                                                                                                           
+                                </div>  
+                                <div class="col-sm-12 mt-2 mt-sm-2 mb-2">
+                                    <label>&nbsp;Tipo Remuneración :</label>
+                                    <select class="form-control" id="sel1"><!--default-select-->
+                                        <option selected disabled>Selecciona un tipo</option>
+                                        <option>Monto Fijo</option>
+                                        <option>Fórmula</option>                                         
+                                    </select>                                                                        
+                                </div>
+                                <div class="col-sm-12 mt-2 mt-sm-2 mb-2">
+                                    <label>&nbsp;Monto :</label>
+                                    <input type="text" class="form-control" placeholder="Agregue un monto">                                                                                                           
+                                </div>     
+                                <div class="col-sm-12 mt-2 mt-sm-2 mb-2">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheckBox1" required>
+                                        <label class="custom-control-label" for="customCheckBox1">Afento Descuento</label>
+                                    </div>
+                                </div>                                       
+                            </div>                                                                             
+                        </form>
+                    </div>      
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger light" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mrarc">Actualizar</button>
+                </div>
+            </div>
+        </div>               
+    </div>
+    <!-- /# Fin Agregar Remuneración --> 
+
+    <!-- Modal Confirmación Agregar Remuneración-->    
+    <div class="modal fade" id="mrarc">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Confirmar</h5>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">¿Desea Registrar Remuneración?</div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger light" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary">Confirmar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Fin Modal Confirmación Agregar Remuneración--> 
+
+    <!-- Modal Editar Remuneración-->
+    <div class="modal fade mrer" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Registrar Remuneración</h5>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">                           
+                    <div class="basic-form">
+                        <form>                            
+                            <div class="form-row">                                  
+                                <div class="col-sm-12 mt-2 mt-sm-2 mb-2">
+                                    <label>&nbsp;Nombre :</label>
+                                    <input type="text" class="form-control" placeholder="Agregue un nombre">                                                                                                           
+                                </div>  
+                                <div class="col-sm-12 mt-2 mt-sm-2 mb-2">
+                                    <label>&nbsp;Tipo Remuneración :</label>
+                                    <select class="form-control" id="sel1"><!--default-select-->
+                                        <option selected disabled>Selecciona un tipo</option>
+                                        <option>Monto Fijo</option>
+                                        <option>Fórmula</option>                                         
+                                    </select>                                                                        
+                                </div>
+                                <div class="col-sm-12 mt-2 mt-sm-2 mb-2">
+                                    <label>&nbsp;Monto :</label>
+                                    <input type="text" class="form-control" placeholder="Agregue un monto">                                                                                                           
+                                </div>     
+                                <div class="col-sm-12 mt-2 mt-sm-2 mb-2">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheckBox1" required>
+                                        <label class="custom-control-label" for="customCheckBox1">Afento Descuento</label>
+                                    </div>
+                                </div>                                       
+                            </div>                                                                             
+                        </form>
+                    </div>      
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger light" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#mrerc">Actualizar</button>
+                </div>
+            </div>
+        </div>               
+    </div>
+    <!-- /# Fin Editar Remuneración --> 
+
+    <!-- Modal Confirmación Editar Remuneración-->    
+    <div class="modal fade" id="mrerc">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Confirmar</h5>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">¿Desea Actualizar Remuneración?</div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger light" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary">Confirmar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Fin Modal Confirmación Editar Remuneración--> 
+
+    <!-- Modal Confirmación Desactivar-->    
+    <div class="modal fade" id="mrdesactiva">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Confirmar</h5>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">¿Desea Desactivar la Remuneración?</div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger light" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary">Confirmar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Fin Modal Confirmación Desactivar--> 
+
+    <!-- Modal Confirmación Activar-->    
+    <div class="modal fade" id="mractiva">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Confirmar</h5>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">¿Desea Activar la Remuneración?</div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger light" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary">Confirmar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Fin Modal Confirmación Activar-->
+
+    <!-- Modal Archivo Pago-->    
+    <div class="modal fade" id="mrap">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Mensaje del Back</h5>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">Inserte un mensaje aquí</div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger light" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary">Confirmar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Fin Modal Archivo Pago--> 
+</div>

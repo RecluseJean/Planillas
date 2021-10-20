@@ -1,0 +1,577 @@
+<div class="container-fluid">
+    <div class="page-titles">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:void(0)">Empleado</a></li>
+            <li class="breadcrumb-item"><a routerLink="/dashboard/empleado/gestion-trabajador">Gestión Trabajador</a></li>
+            <li class="breadcrumb-item active"><a href="javascript:void(0)">Información Trabajador</a></li>
+        </ol>
+    </div>
+    <div class="row">
+        <form>
+            <div class="col-xl-12">
+                <div class="card">        
+                    <div class="card-header">
+                        <div class="card-title" style="font-size: 30px;">
+                            <a class="text-primary" routerLink="/dashboard/empleado/gestion-trabajador"><i class="mdi mdi-keyboard-backspace"></i></a>
+                            Charles Xavier
+                        </div>
+                        
+                    </div>            
+                    <div class="card-body">
+                        <!-- Nav tabs -->
+                        <div class="default-tab">
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" data-toggle="tab" href="#home"><i class="fa fa-user mr-2"></i> Personal</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="tab" href="#profile"><i class="fa fa-globe mr-2"></i> General</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="tab" href="#contact"><i class="fa fa-file-text-o mr-2"></i> Contrato</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="tab" href="#message"><i class="fa fa-line-chart mr-2"></i> Aportaciones</a>
+                                </li>
+                            </ul>
+                            <div class="tab-content">
+                                <div class="tab-pane fade show active" id="home" role="tabpanel">
+                                    <div class="pt-4">                                                                               
+                                        <div class="form-row">   
+                                            <div class="mt-1 col-sm-8 mb-0" >
+                                                <div class="card-body badge-rounded badge-outline-dark">
+                                                    <div class="col-sm-12">
+                                                        <div class="form-row">
+                                                            <!--Documento-->
+                                                            <div class="col-sm-4 mt-4">
+                                                                <label>Tipo de Documento :</label>
+                                                                <select class="form-control default-select" id="sel1">
+                                                                    <option selected disabled>Seleccione un Documento</option>
+                                                                    <option>Dni</option>
+                                                                    <option>Pasaporte</option>
+                                                                    <option>Carnetde Extranjería</option>
+                                                                </select>                                                                        
+                                                            </div> 
+                                                            <div class="col-sm-4 mt-4">
+                                                                <label>Nro. de Documento :</label>
+                                                                <input type="text" class="form-control" placeholder="Ingrese el nro. de pasaporte">
+                                                            </div>
+                                                                <!--Si es Pasaporte-->                                                  
+                                                                <div class="col-sm-4 mt-4">
+                                                                    <label>Pais Emisor :</label>
+                                                                    <select class="form-control default-select" id="sel2">
+                                                                        <option>Perú</option>
+                                                                        <option>Brasil</option>
+                                                                        <option>Rusia</option>
+                                                                        <option>Dinamarca</option>
+                                                                    </select>                                                                        
+                                                                </div>   
+                                                                <!--Si es Recibo por Honorario-->                                                  
+                                                                <div class="col-sm-4 mt-4">
+                                                                    <label>Nro. de RUC :</label>
+                                                                    <input type="text" class="form-control" placeholder="Ingrese el nro. de RUC">
+                                                                </div>
+                                                            <!--Fin Documento-->
+                
+                                                            <!--Datos Personales-->
+                                                            <div class="col-sm-4 mt-4">
+                                                                <label>Nombres :</label>
+                                                                <input type="text" class="form-control" placeholder="Ingrese sus Nombres">
+                                                            </div>
+                                                            <div class="col-sm-4 mt-4">
+                                                                <label>Apellido Paterno :</label>
+                                                                <input type="text" class="form-control" placeholder="Ingrese su Apellido">
+                                                            </div>
+                                                            <div class="col-sm-4 mt-4">
+                                                                <label>Apellido Materno :</label>
+                                                                <input type="text" class="form-control" placeholder="Ingrese su Apellido">
+                                                            </div>
+                
+                                                            <div class="col-sm-4 mt-4">
+                                                                <label>Fecha de Nacimiento :</label>
+                                                                <input type="date" class="form-control" placeholder="Ingrese sus Nombres">
+                                                            </div>
+                                                            <div class="col-sm-4 mt-4">
+                                                                <label>Sexo :</label>
+                                                                <select class="form-control default-select" id="sel2">
+                                                                    <option>Seleccione una opción</option>
+                                                                    <option>Masculino</option>
+                                                                    <option>Femenino</option>
+                                                                </select>                                                                        
+                                                            </div>  
+                                                            <div class="col-sm-4 mt-4">
+                                                                <label>Estado Civil :</label>
+                                                                <select class="form-control default-select" id="sel2">
+                                                                    <option>Seleccione un Estado</option>
+                                                                    <option>Soltero</option>
+                                                                    <option>Casado</option>
+                                                                    <option>Viudo</option>
+                                                                    <option>Divorciado</option>
+                                                                </select>                                                                        
+                                                            </div>  
+                
+                                                            <div class="col-sm-4 mt-4">
+                                                                <label>Correo :</label>
+                                                                <input type="email" class="form-control" placeholder="Ingrese el Correo">
+                                                            </div>
+                                                            <div class="col-sm-4 mt-4">
+                                                                <label>Celular :</label>
+                                                                <input type="text" class="form-control" placeholder="Ingrese el Nro. Celular">
+                                                            </div>
+                                                            <!--Fin Datos Personales-->  
+                                                                
+                                                        </div>  
+                                                    </div>    
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4 badge-rounded badge-outline-dark">
+                                                <div class="card-body">
+                                                    <div class="col-sm-12">
+                                                        <div class="form-row">
+                                                            <div class="row">
+                                                                <div class="col-xl-12 col-lg-12 col-md-10 col-sm-12">
+                                                                    <div class="card-body">
+                                                                        <div class="new-arrival-product">
+                                                                            <div class="new-arrivals-img-contnent">
+                                                                                <img class="img-fluid" src="../../../../../../assets/images/profile/logoperfil.jpg" alt="">
+                                                                            </div>
+                                                                            <div class="new-arrival-content text-center mt-3">
+                                                                                <button type="button" class="btn light btn-primary" style="overflow: hidden; position: relative;">
+                                                                                    <input class="fileInput" type="file" name="file1" accept="image/png,image/jpeg"
+                                                                                    style="cursor: pointer; height: 100%; position:absolute; top: 0; right: 0; z-index: 99; opacity: 0; -moz-opacity: 0; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0)"/>
+                                                                                    <span class="btn-icon-left text-primary">
+                                                                                        <i class="fa fa-camera color-info"></i>
+                                                                                    </span>Subir Imagen
+                                                                                </button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>    
+                                            </div>                                                
+                                        </div> 
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="profile">
+                                    <div class="pt-4">
+                                        <div class="form-row">
+                                            <div class="mt-1 col-sm-6 mb-0" >
+                                                <div class="card-body badge-rounded badge-outline-dark">
+                                                    <div class="form-row">
+                                                        <div class="col-sm-12  mt-2 mt-sm-2">
+                                                            <label>Departamento</label>
+                                                            <select class="form-control default-select" id="sel1">
+                                                                <option selected disabled>Seleccione un Documento</option>
+                                                                <option>Limas</option>
+                                                                <option>Ayacucho</option>
+                                                                <option>Cuzco</option>
+                                                            </select>                                                                        
+                                                        </div> 
+                                                        <div class="col-sm-12  mt-2 mt-sm-2">
+                                                            <label>Provincia</label>
+                                                            <select class="form-control default-select" id="sel1">
+                                                                <option selected disabled>Seleccione un Documento</option>
+                                                                <option>Lima</option>
+                                                                <option>Lima</option>
+                                                                <option>Lima</option>
+                                                            </select>                                                                        
+                                                        </div> 
+                                                        <div class="col-sm-12  mt-2 mt-sm-2">
+                                                            <label>Distrito</label>
+                                                            <select class="form-control default-select" id="sel1">
+                                                                <option selected disabled>Seleccione un Documento</option>
+                                                                <option>Comas</option>
+                                                                <option>Carabayllo</option>
+                                                                <option>Magdalena</option>
+                                                            </select>                                                                        
+                                                        </div>   
+                                                    </div>
+                                                </div>
+                                            </div> 
+                                            <div class="mt-1 col-sm-6 mb-0">
+                                                <div class="card-body badge-rounded badge-outline-dark">
+                                                    <div class="form-row">
+                                                        <div class="col-sm-12  mt-2 mt-sm-2">
+                                                            <label>Dirección</label>
+                                                            <input type="text" class="form-control" placeholder="Ingrese la Dirección">                                                                   
+                                                        </div> 
+                                                        <div class="col-sm-6 mt-2 mt-sm-2">
+                                                            <label>Zona</label>
+                                                            <select class="form-control default-select" id="sel1">
+                                                                <option selected>Asentamiento</option>
+                                                                <option>Caserío</option>
+                                                            </select>                                                                        
+                                                        </div> 
+                                                        <div class="col-sm-6 mt-2 mt-sm-2">
+                                                            <label>Nombre</label>
+                                                            <input type="text" class="form-control" placeholder="Ingrese el Nombre">                                                                                                                                                                                                 
+                                                        </div>
+                                                        <div class="col-sm-12  mt-2 mt-sm-2">
+                                                            <label>Referencia</label>
+                                                            <input type="text" class="form-control" placeholder="Ingrese una Referencia">                                                                                                                                                                                                 
+                                                        </div>   
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--Solo si Es Planillas - Si es Recibo por honorario hacer NGIF-->
+                                            <div class="mt-2 col-sm-12 mb-0">
+                                                <div class="card-body badge-rounded badge-outline-dark">
+                                                    <div class="form-row">                                                            
+                                                        <div class="col-sm-5 mt-1 mt-sm-2">
+                                                            <label>Educación</label>
+                                                            <select class="form-control default-select" id="sel1">
+                                                                <option selected>Universitario</option>
+                                                                <option>Secundaria</option>
+                                                            </select>                                                                        
+                                                        </div> 
+                                                        <div class="col-sm-2 mt-1 mt-sm-2">
+                                                            <label>Hijos</label>
+                                                            <input type="text" class="form-control" placeholder="Cantidad">                                                                   
+                                                        </div> 
+                                                        <div class="col-sm-5 mt-1 mt-sm-2">
+                                                            <label>Ocupación</label>
+                                                            <input type="text" class="form-control" placeholder="Ingrese la Ocupación">                                                                                                                                                                                                 
+                                                        </div>                                                              
+                                                    </div>
+                                                </div>
+                                            </div>   
+                                            <!--Solo si Es Planillas - Si es Recibo por honorario hacer NGIF-->
+                                        </div>                                                             
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="contact">
+                                    <div class="pt-4">
+                                        <div class="form-row">
+                                            <div class="mt-1 col-sm-12 mb-0" >
+                                                <div class="card-body badge-rounded badge-outline-dark">
+                                                    <div class="form-row">
+                                                        <!--Solo si es planilla-->
+                                                        <div class="col-sm-6  mt-2 mt-sm-2">
+                                                            <label>Regimen Laboral</label>
+                                                            <select class="form-control default-select" id="sel1">
+                                                                <option selected disabled>Seleccione un Documento</option>
+                                                                <option>Limas</option>
+                                                                <option>Ayacucho</option>
+                                                                <option>Cuzco</option>
+                                                            </select>                                                                        
+                                                        </div> 
+                                                        <div class="col-sm-6  mt-2 mt-sm-2">
+                                                            <label>Contrato Laboral</label>
+                                                            <select class="form-control default-select" id="sel1">
+                                                                <option selected disabled>Seleccione un Documento</option>
+                                                                <option>Lima</option>
+                                                                <option>Lima</option>
+                                                                <option>Lima</option>
+                                                            </select>                                                                        
+                                                        </div> 
+                                                        <div class="col-sm-6  mt-2 mt-sm-2">
+                                                            <label>Situación</label>
+                                                            <select class="form-control default-select" id="sel1">
+                                                                <option selected disabled>Seleccione un Documento</option>
+                                                                <option>Comas</option>
+                                                                <option>Carabayllo</option>
+                                                                <option>Magdalena</option>
+                                                            </select>                                                                        
+                                                        </div>
+                                                        <div class="col-sm-6  mt-2 mt-sm-2">
+                                                            <label>Centro Costo</label>
+                                                            <select class="form-control default-select" id="sel1">
+                                                                <option selected disabled>Seleccione un Documento</option>
+                                                                <option>Comas</option>
+                                                                <option>Carabayllo</option>
+                                                                <option>Magdalena</option>
+                                                            </select>                                                                        
+                                                        </div>
+                                                        <!--Solo si es planilla-->
+
+                                                        <!--Solo si es Recibo por Honorario-->                                                           
+                                                        <div class="col-sm-4  mt-2 mt-sm-2">
+                                                            <label>Contrato Laboral</label>
+                                                            <select class="form-control default-select" id="sel1">
+                                                                <option selected disabled>Seleccione un Documento</option>
+                                                                <option>Lima</option>
+                                                                <option>Lima</option>
+                                                                <option>Lima</option>
+                                                            </select>                                                                        
+                                                        </div> 
+                                                        <div class="col-sm-4  mt-2 mt-sm-2">
+                                                            <label>Situación</label>
+                                                            <select class="form-control default-select" id="sel1">
+                                                                <option selected disabled>Seleccione un Documento</option>
+                                                                <option>Comas</option>
+                                                                <option>Carabayllo</option>
+                                                                <option>Magdalena</option>
+                                                            </select>                                                                        
+                                                        </div>
+                                                        <div class="col-sm-4  mt-2 mt-sm-2">
+                                                            <label>Centro Costo</label>
+                                                            <select class="form-control default-select" id="sel1">
+                                                                <option selected disabled>Seleccione un Documento</option>
+                                                                <option>Comas</option>
+                                                                <option>Carabayllo</option>
+                                                                <option>Magdalena</option>
+                                                            </select>                                                                        
+                                                        </div>
+                                                        <!--Solo si es Recibo por Honorario-->
+
+                                                        <div class="col-sm-4  mt-2 mt-sm-2">
+                                                            <label>Área Empresa</label>
+                                                            <select class="form-control default-select" id="sel1">
+                                                                <option selected disabled>Seleccione un Documento</option>
+                                                                <option>Limas</option>
+                                                                <option>Ayacucho</option>
+                                                                <option>Cuzco</option>
+                                                            </select>                                                                        
+                                                        </div> 
+                                                        <div class="col-sm-4  mt-2 mt-sm-2">
+                                                            <label>Puesto</label>
+                                                            <select class="form-control default-select" id="sel1">
+                                                                <option selected disabled>Seleccione un Documento</option>
+                                                                <option>Lima</option>
+                                                                <option>Lima</option>
+                                                                <option>Lima</option>
+                                                            </select>                                                                        
+                                                        </div> 
+                                                        <div class="col-sm-4  mt-2 mt-sm-2">
+                                                            <label>Horario</label>
+                                                            <select class="form-control default-select" id="sel1">
+                                                                <option selected disabled>Seleccione un Documento</option>
+                                                                <option>Comas</option>
+                                                                <option>Carabayllo</option>
+                                                                <option>Magdalena</option>
+                                                            </select>                                                                        
+                                                        </div>                                                                                                                           
+                                                    </div>
+                                                </div>
+                                            </div> 
+                                            <div class="mt-1 col-sm-12 mb-0 mt-2">
+                                                <div class="card-body badge-rounded badge-outline-dark">
+                                                    <div class="form-row">
+                                                        <div class="col-sm-4 mt-2 mt-sm-2">
+                                                            <label>Fecha Inicio</label>
+                                                            <input type="date" class="form-control">
+                                                        </div>
+                                                        <div class="col-sm-4  mt-2 mt-sm-2">
+                                                            <label>Sueldo</label>
+                                                            <input type="text" class="form-control" placeholder="s/0.00">                                                                   
+                                                        </div> 
+                                                        <div class="col-sm-4  mt-2 mt-sm-2">
+                                                            <label>Por Hora</label>
+                                                            <input disabled type="text" class="form-control" placeholder="s/0.00">                                                                   
+                                                        </div> 
+                                                        <div class="col-sm-6 mt-2 mt-sm-2">
+                                                            <label>Tipo Pago</label>
+                                                            <select class="form-control default-select" id="sel1">
+                                                                <option selected>Efectivo</option>
+                                                                <option>Transferencia</option>
+                                                            </select>                                                                        
+                                                        </div>                                                             
+                                                        <!--Si es transferencia - HACER NGIF-->
+                                                        <div class="col-sm-6 mt-2 mt-sm-2">
+                                                            <label>Banco</label>
+                                                            <select class="form-control default-select" id="sel1">
+                                                                <option selected>Bbva</option>
+                                                                <option>Bcp</option>
+                                                            </select>                                                                        
+                                                        </div> 
+                                                        <div class="col-sm-4 mt-2 mt-sm-2">
+                                                            <label>Cuenta</label>
+                                                            <select class="form-control default-select" id="sel1">
+                                                                <option selected disabled>Tipo de Cuenta</option>
+                                                                <option>Ahorro</option>
+                                                                <option>Corriente</option>
+                                                            </select>                                                                        
+                                                        </div> 
+                                                        <div class="col-sm-4 mt-2 mt-sm-2">
+                                                            <label>Moneda</label>
+                                                            <select class="form-control default-select" id="sel1">
+                                                                <option selected disabled>Tipo de Moneda</option>
+                                                                <option>Soles</option>
+                                                                <option>Dolar</option>
+                                                            </select>                                                                        
+                                                        </div>
+                                                        <div class="col-sm-4  mt-2 mt-sm-2">
+                                                            <label>Nro. Cuenta</label>
+                                                            <input type="text" class="form-control" placeholder="Ingrese el Número de Cuenta">                                                                   
+                                                        </div> 
+                                                        <div class="col-sm-6  mt-2 mt-sm-2">
+                                                            <label>Nro. CCI</label>
+                                                            <input type="text" class="form-control" placeholder="Ingrese el Número de CCI">                                                                   
+                                                        </div>   
+                                                        <!--Fin Si es transferencia-->  
+                                                        <div class="col-sm-6 mt-2 mt-sm-2">
+                                                            <label>Movilidad</label>
+                                                            <input type="text" class="form-control" placeholder="s/0.00">                                                                   
+                                                        </div>                                                           
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="mt-2 col-sm-12 mb-0 mt-2">
+                                                <div class="card-body badge-rounded badge-outline-dark">
+                                                    <div class="form-row">    
+                                                        <div class="col-sm-6 mt-1 mt-sm-2">
+                                                            <div class="custom-control custom-checkbox mb-3">
+                                                                <input type="checkbox" class="custom-control-input" id="customCheckBox1" required>
+                                                                <label class="custom-control-label" for="customCheckBox1">Regimen Alternativo, Acumulativo o Atípico</label>
+                                                            </div>
+                                                        </div> 
+                                                        <div class="col-sm-6 mt-1 mt-sm-2">
+                                                            <div class="custom-control custom-checkbox mb-3">
+                                                                <input type="checkbox" class="custom-control-input" id="customCheckBox2" required>
+                                                                <label class="custom-control-label" for="customCheckBox2">Jornada de Trabajo Máxima</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-6 mt-1 mt-sm-2">
+                                                            <div class="custom-control custom-checkbox mb-3">
+                                                                <input type="checkbox" class="custom-control-input" id="customCheckBox3" required>
+                                                                <label class="custom-control-label" for="customCheckBox3">Discapacidad</label>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <div class="col-sm-6 mt-1 mt-sm-2">
+                                                            <div class="custom-control custom-checkbox mb-3">
+                                                                <input type="checkbox" class="custom-control-input" id="customCheckBox4" required>
+                                                                <label class="custom-control-label" for="customCheckBox4">Horario Nocturno</label>
+                                                            </div>
+                                                        </div>                                                       
+                                                                                                                    
+                                                    </div>
+                                                </div>
+                                            </div>   
+                                        </div>                                                     
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="message">
+                                    <div class="pt-4">
+                                        <div class="form-row">
+                                            <div class="mt-1 col-sm-12 mb-0" >
+                                                <div class="card-body badge-rounded badge-outline-dark">
+                                                    <div class="form-row">
+                                                        <div class="col-sm-4 mt-2 mt-sm-2">
+                                                            <label>Regimen Pensionario</label>
+                                                            <select class="form-control default-select" id="sel1">
+                                                                <option selected disabled>Seleccione un Regimen</option>
+                                                                <option>Prima</option>
+                                                                <option>Onp</option>
+                                                                <option>Habitat</option>
+                                                            </select>                                                                        
+                                                        </div> 
+                                                        <div class="col-sm-4 mt-2 mt-sm-2">
+                                                            <label>Fecha de Ingreso</label>
+                                                            <input type="date" class="form-control">                                                                   
+                                                        </div> 
+                                                        <div class="col-sm-4 mt-2 mt-sm-2">                      
+                                                            <label>&nbsp;</label>                                          
+                                                            <div class="custom-control custom-checkbox mt-2">
+                                                                <input type="checkbox" class="custom-control-input" id="customCheckBox5" required>
+                                                                <label class="custom-control-label" for="customCheckBox5"> Comisión Mixta</label>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <div class="col-sm-6 mt-2 mt-sm-2">
+                                                            <label>Nro. CUSPP</label>
+                                                            <input type="text" class="form-control" placeholder="Ingrese el Número de CUSPP">                                                                   
+                                                        </div>                                                           
+                                                        <div class="col-sm-6 mt-2 mt-sm-2">
+                                                            <label>SCTR Pensión</label>
+                                                            <select class="form-control default-select" id="sel1">
+                                                                <option selected disabled>Seleccione una Opción</option>
+                                                                <option>SIS Prueba</option>
+                                                                <option>EPS</option>
+                                                                <option>ONP</option>
+                                                            </select>                                                                        
+                                                        </div>                                                            
+                                                        
+                                                        <div class="col-sm-4 mt-4 mt-sm-3">
+                                                            <div class="custom-control custom-checkbox mb-3">
+                                                                <input type="checkbox" class="custom-control-input" id="customCheckBox6" required>
+                                                                <label class="custom-control-label" for="customCheckBox6">Otros Ingresos de 5ta Categoría</label>
+                                                            </div>
+                                                        </div>                                                             
+                                                        <div class="col-sm-4 mt-4 mt-sm-3">
+                                                            <div class="custom-control custom-checkbox mb-3">
+                                                                <input type="checkbox" class="custom-control-input" id="customCheckBox8" required>
+                                                                <label class="custom-control-label" for="customCheckBox8">Renta de 5ta Categoría Exonerada o inafecta</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-4 mt-4 mt-sm-3">
+                                                            <div class="custom-control custom-checkbox mb-3">
+                                                                <input type="checkbox" class="custom-control-input" id="customCheckBox7" required>
+                                                                <label class="custom-control-label" for="customCheckBox7">Sindicalizado</label>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-sm-6 mt-2 mt-sm-2">
+                                                            <label>Banco CTS</label>
+                                                            <select class="form-control default-select" id="sel1">
+                                                                <option selected disabled>Seleccione una Opción</option>
+                                                                <option>Citibank</option>
+                                                                <option>Banco del Comercio</option>
+                                                                <option>Banco Pichincha</option>
+                                                            </select>                                                                        
+                                                        </div> 
+                                                        <div class="col-sm-6 mt-2 mt-sm-2">
+                                                            <label>Nro. Cuenta</label>
+                                                            <input type="text" class="form-control" placeholder="Ingrese el Número de Cuenta">                                                                   
+                                                        </div> 
+                                                                                                                                                                            
+                                                    </div>
+                                                </div>
+                                            </div> 
+                                            
+                                            <div class="mt-1 col-sm-12 mb-0 mt-2">
+                                                <div class="card-body badge-rounded badge-outline-dark">
+                                                    <div class="form-row">
+                                                        <div class="col-sm-6 mt-2 mt-sm-2">
+                                                            <label>Regimen Salud</label>
+                                                            <select class="form-control default-select" id="sel1">
+                                                                <option selected disabled>Seleccione una Opción</option>
+                                                                <option>ESSALUD PENSIONISTAS</option>
+                                                                <option>ESSALUD REGULAR</option>
+                                                            </select>                                                                        
+                                                        </div> 
+                                                        <div class="col-sm-6 mt-2 mt-sm-2">
+                                                            <label>Fecha de Ingreso</label>
+                                                            <input type="date" class="form-control">                                                                   
+                                                        </div> 
+                                                        
+                                                        <div class="col-sm-4 mt-2 mt-sm-2">
+                                                            <label>Nro. EsSalud</label>
+                                                            <input type="text" class="form-control" placeholder="Nro. EsSalud">                                                                   
+                                                        </div> 
+                                                        <div class="col-sm-4 mt-2 mt-sm-2">
+                                                            <label>SCTR Salud</label>
+                                                            <select class="form-control default-select" id="sel1">
+                                                                <option selected disabled>Seleccione un Regimen</option>
+                                                                <option>ONP</option>
+                                                                <option>SIS Prueba</option>
+                                                                <option>Eps</option>
+                                                            </select>                                                                        
+                                                        </div>
+                                                        <div class="col-sm-4 mt-2 mt-sm-2">                      
+                                                            <label>&nbsp;</label>                                          
+                                                            <div class="custom-control custom-checkbox mt-2">
+                                                                <input type="checkbox" class="custom-control-input" id="customCheckBox8" required>
+                                                                <label class="custom-control-label" for="customCheckBox8"> EsSalud + Vida</label>
+                                                            </div>
+                                                        </div>
+                                                                                                                
+                                                    </div>
+                                                </div>
+                                            </div>                                                
+                                        </div>                                                     
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

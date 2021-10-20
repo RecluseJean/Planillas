@@ -30,6 +30,7 @@ import { ConceptoCuentasComponent } from './contabilidad/concepto-cuentas/concep
 import { ControlAsistenciaComponent } from './empleado/control-asistencia/control-asistencia.component';
 import { DerechoHabientesComponent } from './empleado/derecho-habientes/derecho-habientes.component';
 import { GestionTrabajadorComponent } from './empleado/gestion-trabajador/gestion-trabajador.component';
+import { InfoTrabajadorComponent } from './empleado/gestion-trabajador/info-trabajador/info-trabajador.component';
 import { SolicitudComponent } from './empleado/solicitud/solicitud.component';
 
 import { GestionEquipoComponent } from './equipo/gestion-equipo/gestion-equipo.component';
@@ -68,9 +69,11 @@ import { NgxPaginationModule } from 'ngx-pagination';
     ParametrosComponent,
 
     ConceptoCuentasComponent,
+
     ControlAsistenciaComponent,
     DerechoHabientesComponent,
-    GestionTrabajadorComponent,
+    GestionTrabajadorComponent,   
+    InfoTrabajadorComponent, 
     SolicitudComponent,
 
     GestionEquipoComponent,
@@ -79,7 +82,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
     AdelantoSueldoComponent,
     GenerarPlanillaComponent,
     GestionVacacionesComponent,
-    PrestamoComponent
+    PrestamoComponent,
     
   ],
   imports: [

@@ -29,6 +29,7 @@ import { ConceptoCuentasComponent } from './contabilidad/concepto-cuentas/concep
 import { ControlAsistenciaComponent } from './empleado/control-asistencia/control-asistencia.component';
 import { DerechoHabientesComponent } from './empleado/derecho-habientes/derecho-habientes.component';
 import { GestionTrabajadorComponent } from './empleado/gestion-trabajador/gestion-trabajador.component';
+import { InfoTrabajadorComponent } from './empleado/gestion-trabajador/info-trabajador/info-trabajador.component';
 import { SolicitudComponent } from './empleado/solicitud/solicitud.component';
 
 import { GestionEquipoComponent } from './equipo/gestion-equipo/gestion-equipo.component';
@@ -73,10 +74,11 @@ const routesDash : Routes = [
       { path: 'configuracion/tipo-planilla', component: TipoPlanillaComponent},
       
       { path: 'contabilidad/concepto-cuentas', component: ConceptoCuentasComponent },  
-
+      
       { path: 'empleado/control-asistencia', component: ControlAsistenciaComponent },
       { path: 'empleado/derecho-habientes', component: DerechoHabientesComponent },
       { path: 'empleado/gestion-trabajador', component: GestionTrabajadorComponent },
+      { path: 'empleado/informacion-trabajador', component: InfoTrabajadorComponent},
       { path: 'empleado/solicitud', component: SolicitudComponent},
 
       { path: 'equipo/gestion-equipo', component: GestionEquipoComponent },

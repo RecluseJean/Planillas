@@ -44,11 +44,13 @@
                                         </div>
                                     </td>
                                     <!-- Button trigger modal -->
-                                </tr>
-                                <pagination-controls (pageChange)="p = $event" previousLabel=""
-                                nextLabel="" ></pagination-controls>                                
+                                </tr>                                                
                             </tbody>
                         </table>   
+                        <div class="pagination">
+                            <pagination-controls (pageChange)="p = $event" previousLabel=""
+                            nextLabel=""></pagination-controls>
+                        </div> 
                     </div>
                 </div>
             </div>

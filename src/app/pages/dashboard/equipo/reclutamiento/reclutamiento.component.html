@@ -38,20 +38,22 @@
                         <table  class="table table-hover table-responsive-sm">
                             <thead class="thead-primary">
                                 <tr>
-                                    <th>#</th>
-                                    <th>Reclutamiento</th>                                   
+                                    <th class="text-center">#</th>
+                                    <th class="text-center">Reclutamiento</th>                                   
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr *ngFor="let lista of CurrentPerfil | paginate: { itemsPerPage: 5, currentPage: p }">
+                                <tr class="text-center" *ngFor="let lista of CurrentPerfil | paginate: { itemsPerPage: 5, currentPage: p }">
                                     <th> {{lista.id}} </th>
-                                    <td> {{lista.nombre}} </td> 
-                                   
+                                    <td> {{lista.nombre}} </td>                                    
                                 </tr>
-                                <pagination-controls (pageChange)="p = $event" previousLabel=""
-                                nextLabel="" ></pagination-controls>                                
+                                               
                             </tbody>
-                        </table>   
+                        </table> 
+                        <div class="pagination">
+                            <pagination-controls (pageChange)="p = $event" previousLabel=""
+                            nextLabel=""></pagination-controls>
+                        </div>  
                     </div>
                 </div>
             </div>

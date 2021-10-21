@@ -30,6 +30,22 @@ export class GestionPaginasComponent implements OnInit {
     { id: 7, 
       nombre: 'Gerente de Recursos Humanos'
     },
+    { id: 8,
+      nombre: 'Trabajador'
+    },
+    { id: 9, 
+      nombre: 'Supervisor'
+    },
+    { id: 10, 
+      nombre: 'Gerente de Recursos Humanos'
+    },     
+    { id: 11, 
+      nombre: 'Supervisor'
+    },
+    { id: 12, 
+      nombre: 'Gerente de Recursos Humanos'
+    },
+    
   ];
 
   constructor() { }

@@ -145,9 +145,12 @@
                                                             <button type="button" class="btn tp-btn-light btn-info">ver</button>
                                                         </td>
                                                     </tr> 
-                                                    <pagination-controls (pageChange)="p = $event" previousLabel="" nextLabel="" ></pagination-controls>                                                       
                                                 </tbody>
                                             </table>  
+                                            <div class="pagination">
+                                                <pagination-controls (pageChange)="p = $event" previousLabel=""
+                                                nextLabel=""></pagination-controls>
+                                            </div> 
                                         </div>
                                     </div>
                                 </div>

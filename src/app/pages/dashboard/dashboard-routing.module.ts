@@ -44,6 +44,7 @@ const routesDash : Routes = [
   {
     path: 'dashboard', component: DashboardComponent,
     children: [
+
       { path: '', redirectTo: 'administracion/gestion-paginas', pathMatch: 'full' },  
 
       { path: 'administracion', redirectTo: 'administracion/gestion-paginas', pathMatch: 'full' },  

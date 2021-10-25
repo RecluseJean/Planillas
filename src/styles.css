@@ -1,1 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
+.padre{
+    width: 100%;
+    white-space: nowrap;
+    overflow-x: auto;
+}
+.hijo{
+    display: inline-block!important;
+    width: 50%;
+    height: 100%;
+}
+
+#ancho{
+    width: 130%!important;
+}

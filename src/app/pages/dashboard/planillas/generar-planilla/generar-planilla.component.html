@@ -1,0 +1,326 @@
+<div class="container-fluid">
+    <div class="page-titles">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="javascript:void(0)">Planillas</a></li>
+            <li class="breadcrumb-item active"><a href="javascript:void(0)">Generar Planilla</a></li>
+        </ol>
+    </div>
+    <div class="col-xl-12">
+        <div class="card">
+            <div class="card-body">
+                <div id="padre" class="form-row">
+                    <div class="form-row align-items-center">
+                        <div class="col-auto my-1 hijo">
+                            <label class="mr-sm-2" style="font-weight: bolder; font-size: 1rem; color: #000;margin-left: 10%;">Empresa</label>
+                            <select class="default-select">
+                                <option selected>Selecciona la Empresa</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row align-items-center">
+                        <div class="col-auto my-1 hijo">
+                            <label class="mr-sm-2" style="font-weight: bolder; font-size: 1rem; color: #000;margin-left: 10%;">Año</label>
+                            <select class="mr-sm-2 default-select" id="inlineFormCustomSelect">
+                                <option selected>Selecciona el Año</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row align-items-center">
+                        <div class="col-auto my-1 hijo">
+                            <label class="mr-sm-2" style="font-weight: bolder; font-size: 1rem; color: #000;margin-left: 10%;">Mes</label>
+                            <select class="mr-sm-2 default-select" id="inlineFormCustomSelect">
+                                <option selected>Selecciona el Mes</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- -->
+    
+    <!-- -->
+    <div class="col-xl-12">
+        <div class="card">
+            <div class="card-body">
+                <ul class="nav nav-pills mb-4">
+                    <li class=" nav-item">
+                        <a href="#navpillsCA1" class="nav-link active" data-toggle="tab" aria-expanded="false">4ta Categoría</a>
+                    </li>
+                    <li class="nav-item mr-auto">
+                        <a href="#navpillsCA2" class="nav-link" data-toggle="tab" aria-expanded="false">5ta Categoría</a>
+                    </li>
+                    <li class="nav-item">
+                        <button type="button" class="btn btn-rounded btn-primary" style="font-size: 13px;"><span
+                            class="btn-icon-left text-primary"><i class="fa fa-cog" style="font-size: 20px;"></i>
+                        </span>Generar Archivo General</button>
+                    </li>
+                    <p style="margin-left:8px"></p>
+                    <li class="nav-item">
+                        <button type="button" class="btn btn-rounded btn-success" style="font-size: 13px;"><span
+                            class="btn-icon-left text-success"><i class="fa fa-cloud-upload" style="font-size: 20px;"></i>
+                        </span>Cargas Masivas RHE</button>
+                    </li>
+                    <p style="margin-left:8px"></p>
+                    <li class="nav-item">
+                        <button type="button" class="btn btn-rounded btn-secondary" style="font-size: 13px;"><span
+                            class="btn-icon-left text-secondary"><i class="fa fa-file-text" style="font-size: 20px;"></i>
+                        </span>Consolidado Nómina 4ta</button>
+                    </li>
+                    <p style="margin-left:8px"></p>                               
+                    <li class="nav-item">
+                        <div class="input-group diet-search ml-2">
+                            <input type="text" class="form-control" placeholder="Buscar Aquí...">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
+                            </div>
+                        </div>
+                    </li>                    
+                </ul>
+                <!-- --> 
+                <div class="tab-content">
+                    <div id="navpillsCA1" class="tab-pane active">
+                        <div class="table-responsive">
+                            <table class="table header-border table-responsive-sm">
+                                <thead>
+                                    <tr>
+                                        <th>Número de Documento</th>
+                                        <th>Apellidos y Nombres</th>
+                                        <th>Correo electrónico</th>
+                                        <th>Estado</th>
+                                        <th>Generar Archivo</th>
+                                        <th>Suspensión</th>
+                                        <th>RHE</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>08587715
+                                        </td>
+                                        <td>BONIFAZ PAREDES ELIO GUSTAVO</td>
+                                        <td>mail@email.com</td>
+                                        <td>
+                                            <span class="badge badge-success">Activo</span>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex">
+                                                <a href="#" ><i class="fa fa-cloud-download" style="font-size: 25px; color: #0B2A97; margin-left: 100%;"></i></a>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex">
+                                                <a href="#" ><i class="fa fa-clock-o" style="font-size: 25px; color: #0B2A97; margin-left: 100%;"></i></a>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex">
+                                                <a href="#" ><i class="fa fa-file-text" style="font-size: 25px; color: #0B2A97; margin-left: 50%;"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="javascript:void(0)">70876196</a>
+                                        </td>
+                                        <td>PICARDO MENDOZA JESUS OMAR</td>
+                                        <td>mail@email.com</td>
+                                        <td>
+                                            <span class="badge badge-danger">Inactivo</span>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex">
+                                                <a href="#" ><i class="fa fa-cloud-download" style="font-size: 25px; color: #0B2A97; margin-left: 100%;"></i></a>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex">
+                                                <a href="#" ><i class="fa fa-clock-o" style="font-size: 25px; color: #0B2A97; margin-left: 100%;"></i></a>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex">
+                                                <a href="#" ><i class="fa fa-file-text" style="font-size: 25px; color: #0B2A97; margin-left: 50%;"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>12345678
+                                        </td>
+                                        <td>PITER CASAZOLA QUISPE</td>
+                                        <td>mail@email.com</td>
+                                        <td>
+                                            <span class="badge badge-success">Activo</span>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex">
+                                                <a href="#" ><i class="fa fa-cloud-download" style="font-size: 25px; color: #0B2A97; margin-left: 100%;"></i></a>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex">
+                                                <a href="#" ><i class="fa fa-clock-o" style="font-size: 25px; color: #0B2A97; margin-left: 100%;"></i></a>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex">
+                                                <a href="#" ><i class="fa fa-file-text" style="font-size: 25px; color: #0B2A97; margin-left: 50%;"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>87654321
+                                        </td>
+                                        <td>DIEGO HERNANDO CAMPOS SANDOVAL</td>
+                                        <td>mail@email.com</td>
+                                        <td>
+                                            <span class="badge badge-danger">Inactivo</span>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex">
+                                                <a href="#" ><i class="fa fa-cloud-download" style="font-size: 25px; color: #0B2A97; margin-left: 100%;"></i></a>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex">
+                                                <a href="#" ><i class="fa fa-clock-o" style="font-size: 25px; color: #0B2A97; margin-left: 100%;"></i></a>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex">
+                                                <a href="#" ><i class="fa fa-file-text" style="font-size: 25px; color: #0B2A97; margin-left: 50%;"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- 5ta Categoria -->
+                    <div id="navpillsCA2" class="tab-pane">
+                        <div class="table-responsive">
+                            <table class="table header-border table-responsive-sm">
+                                <thead>
+                                    <tr>
+                                        <th>Número de Documento</th>
+                                        <th>Apellidos y Nombres</th>
+                                        <th>Correo electrónico</th>
+                                        <th>Estado</th>
+                                        <th>Planilla</th>
+                                        <th>Boleta</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>08587715
+                                        </td>
+                                        <td>BONIFAZ PAREDES ELIO GUSTAVO</td>
+                                        <td>mail@email.com</td>
+                                        <td>
+                                            <span class="badge badge-success">Activo</span>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex">
+                                                <a href="#" ><i class="fa fa-book" style="font-size: 25px; color: #0B2A97; margin-left: 100%;"></i></a>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex">
+                                                <a href="#" ><i class="fa fa-file-text" style="font-size: 25px; color: #0B2A97; margin-left: 100%;"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="javascript:void(0)">70876196</a>
+                                        </td>
+                                        <td>PICARDO MENDOZA JESUS OMAR</td>
+                                        <td>mail@email.com</td>
+                                        <td>
+                                            <span class="badge badge-danger">Inactivo</span>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex">
+                                                <a href="#" ><i class="fa fa-book" style="font-size: 25px; color: #0B2A97; margin-left: 100%;"></i></a>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex">
+                                                <a href="#" ><i class="fa fa-file-text" style="font-size: 25px; color: #0B2A97; margin-left: 100%;"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>12345678
+                                        </td>
+                                        <td>PITER CASAZOLA QUISPE</td>
+                                        <td>mail@email.com</td>
+                                        <td>
+                                            <span class="badge badge-success">Activo</span>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex">
+                                                <a href="#" ><i class="fa fa-book" style="font-size: 25px; color: #0B2A97; margin-left: 100%;"></i></a>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex">
+                                                <a href="#" ><i class="fa fa-file-text" style="font-size: 25px; color: #0B2A97; margin-left: 100%;"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>87654321
+                                        </td>
+                                        <td>DIEGO HERNANDO CAMPOS SANDOVAL</td>
+                                        <td>mail@email.com</td>
+                                        <td>
+                                            <span class="badge badge-danger">Inactivo</span>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex">
+                                                <a href="#" ><i class="fa fa-book" style="font-size: 25px; color: #0B2A97; margin-left: 100%;"></i></a>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="d-flex">
+                                                <a href="#" ><i class="fa fa-file-text" style="font-size: 25px; color: #0B2A97; margin-left: 100%;"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <!-- -->
+            </div>
+            <nav>
+                <ul class="pagination pagination-gutter">
+                    <li class="page-item page-indicator">
+                        <a class="page-link" href="javascript:void()">
+                            <i class="la la-angle-left"></i></a>
+                    </li>
+                    <li class="page-item active"><a class="page-link" href="javascript:void()">1</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="javascript:void()">2</a></li>
+                    <li class="page-item"><a class="page-link" href="javascript:void()">3</a></li>
+                    <li class="page-item"><a class="page-link" href="javascript:void()">4</a></li>
+                    <li class="page-item page-indicator">
+                        <a class="page-link" href="javascript:void()">
+                            <i class="la la-angle-right"></i></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>

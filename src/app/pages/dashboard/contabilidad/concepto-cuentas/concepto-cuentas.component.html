@@ -26,7 +26,7 @@
                         </span>Generar Reporte</button>
                     </li>  
                     <li *ngIf="this.viewConfigVP" class="nav-item">
-                        <button type="button" class="btn btn-rounded btn-primary"><span
+                        <button data-toggle="modal" data-target=".configurarVistaPlame" type="button" class="btn btn-rounded btn-primary"><span
                             class="btn-icon-left text-primary"><i class="fa fa-cog"></i>
                         </span>Configurar Vista Plame</button>
                     </li>
@@ -71,7 +71,7 @@
                                         </td>
                                         <td>
                                             <div class="d-flex">
-                                                <a href="#" ><i class="fa fa-pencil-square-o" style="font-size: 25px; color: #0B2A97; padding-left: 100%;"></i></a>
+                                                <a href="#" data-toggle="modal" data-target=".actualizarConceptoPlanilla"><i class="fa fa-pencil-square-o" style="font-size: 25px; color: #0B2A97; padding-left: 100%;"></i></a>
                                             </div>
                                         </td>
                                     </tr>
@@ -87,7 +87,7 @@
                                         </td>
                                         <td>
                                             <div class="d-flex">
-                                                <a href="#" ><i class="fa fa-pencil-square-o" style="font-size: 25px; color: #0B2A97; padding-left: 100%;"></i></a>
+                                                <a href="#" data-toggle="modal" data-target=".actualizarConceptoPlanilla"><i class="fa fa-pencil-square-o" style="font-size: 25px; color: #0B2A97; padding-left: 100%;"></i></a>
                                             </div>
                                         </td>
                                     </tr>
@@ -103,7 +103,7 @@
                                         </td>
                                         <td>
                                             <div class="d-flex">
-                                                <a href="#" ><i class="fa fa-pencil-square-o" style="font-size: 25px; color: #0B2A97; padding-left: 100%;"></i></a>
+                                                <a href="#" data-toggle="modal" data-target=".actualizarConceptoPlanilla"><i class="fa fa-pencil-square-o" style="font-size: 25px; color: #0B2A97; padding-left: 100%;"></i></a>
                                             </div>
                                         </td>
                                     </tr>
@@ -119,7 +119,7 @@
                                         </td>
                                         <td>
                                             <div class="d-flex">
-                                                <a href="#" ><i class="fa fa-pencil-square-o" style="font-size: 25px; color: #0B2A97; padding-left: 100%;"></i></a>
+                                                <a href="#" data-toggle="modal" data-target=".actualizarConceptoPlanilla"><i class="fa fa-pencil-square-o" style="font-size: 25px; color: #0B2A97; padding-left: 100%;"></i></a>
                                             </div>
                                         </td>
                                     </tr>
@@ -135,7 +135,7 @@
                                         </td>
                                         <td>
                                             <div class="d-flex">
-                                                <a href="#" ><i class="fa fa-pencil-square-o" style="font-size: 25px; color: #0B2A97; padding-left: 100%;"></i></a>
+                                                <a href="#" data-toggle="modal" data-target=".actualizarConceptoPlanilla"><i class="fa fa-pencil-square-o" style="font-size: 25px; color: #0B2A97; padding-left: 100%;"></i></a>
                                             </div>
                                         </td>
                                     </tr>
@@ -200,4 +200,398 @@
             </nav>
         </div>
     </div>
+</div>
+
+<!-- -->
+
+<!-- <div class="modal fade registrarPrestamo" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header color-page-modal">
+                <h5 class="modal-title" style="color: black;">Registro préstamo</h5>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger light" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div> 
+</div> -->
+
+<!-- -->
+
+<div class="modal fade actualizarConceptoPlanilla" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header color-page-modal">
+                <h5 class="modal-title" style="color: black;">Actualizar Concepto Planilla</h5>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="form-row col-6 mt-2">
+                        <div class="col-12 mb-3">
+                            <label>Descripción :</label>
+                            <input class="form-control form-control-sm" type="text" required>
+                        </div>
+                    </div>
+                    <div class="form-row col-6 mt-2">
+                        <div class="col-12 mb-3">
+                            <label for="montt">Cuenta Haber Provisión :</label>
+                            <select class="form-control default-select" id="sel1">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row col-6">
+                        <div class="col-12 mb-3">
+                            <label for="nroc">Cuenta Debe Provisión :</label>
+                            <select class="form-control default-select" id="sel1">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row col-6">
+                        <div class="col-12 mb-3">
+                            <label for="pagom">Cuenta Haber Pago :</label>
+                            <select class="form-control default-select" id="sel1">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row col-6">
+                        <div class="col-12 mb-3">
+                            <label for="ano">Cuenta Debe Pago :</label>
+                            <select class="form-control default-select" id="sel1">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row col-6">
+                        <div class="col-12 mt-1 mb-3">
+                            <label for id="mes">Concepto Plame :</label>
+                            <select class="form-control default-select" id="sel1">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger light" data-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary light">Actualizar</button>
+            </div>
+        </div>
+    </div> 
+</div>
+
+
+<!-- -->
+
+<div class="modal fade configurarVistaPlame" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header color-page-modal">
+                <h5 class="modal-title" style="color: black;">Registro préstamo</h5>
+            </div>
+            <div class="modal-body">
+                <div class="col-12"
+                    style="border:1px solid #d6d6d6; border-radius: 15px; padding: 10px; flex: 0 0 98%; margin: 10px 5px;">
+                    <div style="margin-bottom: 2em;">
+            
+                        <h4>Configurar Vista Plame: </h4>
+            
+                    </div>
+                    
+
+                                <div style="font-size: 14px;">
+                                    INGRESOS
+                                </div>
+
+                        <div class="table-responsive">
+                            <div class="card example-2 square scrollbar-cyan bordered-cyan" style="overflow-x: hidden;">
+                                <table class="table table-bordered" style="border: 1px solid #dbdde0;">
+                                    <thead style="background: #ebeff5;">
+                                        <tr>
+                                           <!--  <th class="text-center">Agrupador Concepto Plame</th> -->
+                                            <th class="text-left">Concepto Plame</th>
+                                            <th class="text-center">Ver</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr style="font-size: 12px">
+                                            <!-- <td style="padding-top: 15px">{{vplame.conceptoPlame.agrupConcepPlame.descripcion}}</td> -->
+                                            <td>Descripción</td>
+                                            <td class="text-center">
+                                                <input class="form-check-input" type="checkbox"
+                                                    name="checkVisible"  required>
+                                                <label class="form-check-label" ></label>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+            
+
+
+
+                                <div style="font-size: 14px;">
+                                    INGRESOS ASIGNACIONES
+                                </div>
+                                
+                        <div class="table-responsive">
+                            <div class="card example-2 square scrollbar-cyan bordered-cyan" style="overflow-x: hidden;">
+                                <table class="table table-bordered" style="border: 1px solid #dbdde0;">
+                                    <thead style="background: #ebeff5;">
+                                        <tr>
+                                           <!--  <th class="text-center">Agrupador Concepto Plame</th> -->
+                                            <th class="text-left">Concepto Plame</th>
+                                            <th class="text-center">Flg</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!-- <tr style="font-size: 12px"  [hidden]="vplame2.conceptoPlame.agrupConcepPlame.idAgrupadorConcepPlame==2">
+                                                <p>{{i2}}</p>
+                                        </tr> -->
+                                        <tr style="font-size: 12px">
+                                            <!-- <td>{{vplame2.conceptoPlame.agrupConcepPlame.descripcion}}</td> -->
+                                            <td>Descripción</td>
+                                            <td class="text-center">
+                                                <input class="form-check-input" type="checkbox"
+                                                    name="checkVisible2"  required>
+                                                <label class="form-check-label" ></label>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+            
+
+
+
+                                <div style="font-size: 14px;">
+                                    INGRESOS BONIFICACIONES
+                                </div>
+                                
+
+
+                        <div class="table-responsive">
+                            <div class="card example-2 square scrollbar-cyan bordered-cyan" style="overflow-x: hidden;">
+                                <table class="table table-bordered" style="border: 1px solid #dbdde0;">
+                                    <thead style="background: #ebeff5;">
+                                        <tr>
+                                            <!-- <th class="text-center">Agrupador Concepto Plame</th> -->
+                                            <th class="text-left">Concepto Plame</th>
+                                            <th class="text-center">Flg</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr   style="font-size: 12px">                                
+                                            <!-- <td style="padding-top: 15px">{{vplame3.conceptoPlame.agrupConcepPlame.descripcion}}</td> -->
+                                            <td>Descripción</td>
+                                            <td class="text-center">
+                                                <input class="form-check-input" type="checkbox" 
+                                                    name="checkVisible3"  required>
+                                                <label class="form-check-label" ></label>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+            
+
+    
+
+                                <div style="font-size: 14px;">
+                                    INGRESOS GRATIFICACIONES/AGUINALDOS
+                                </div>
+                                
+
+                        <div class="table-responsive">
+                            <div class="card example-2 square scrollbar-cyan bordered-cyan" style="overflow-x: hidden;">
+                                <table class="table table-bordered" style="border: 1px solid #dbdde0;">
+                                    <thead style="background: #ebeff5;">
+                                        <tr>
+                                           <!--  <th class="text-center">Agrupador Concepto Plame</th> -->
+                                            <th class="text-left">Concepto Plame</th>
+                                            <th class="text-center">Flg</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr style="font-size: 12px">                                
+                                            <!-- <td style="padding-top: 15px">{{vplame4.conceptoPlame.agrupConcepPlame.descripcion}}</td> -->
+                                            <td>Descripción</td>
+                                            <td class="text-center">
+                                                <input class="form-check-input" type="checkbox"
+                                                    name="checkVisible4" required>
+                                                <label class="form-check-label" ></label>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+
+
+                                <div style="font-size: 14px;">
+                                    INGRESOS INDEMNIZACIONES
+                                </div>
+                                
+
+
+                        <div class="table-responsive">
+                            <div class="card example-2 square scrollbar-cyan bordered-cyan" style="overflow-x: hidden;">
+                                <table class="table table-bordered" style="border: 1px solid #dbdde0;">
+                                    <thead style="background: #ebeff5;">
+                                        <tr>
+                                            <!-- <th class="text-center">Agrupador Concepto Plame</th> -->
+                                            <th class="text-left">Concepto Plame</th>
+                                            <th class="text-center">Flg</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr style="font-size: 12px">
+                                           <!--  <td style="padding-top: 15px">{{vplame5.conceptoPlame.agrupConcepPlame.descripcion}}</td> -->
+                                            <td>Descripción</td>
+                                            <td class="text-center">
+                                                <input class="form-check-input" type="checkbox" 
+                                                    name="checkVisible5"  required>
+                                                <label class="form-check-label" ></label>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+            
+
+
+                            <div style="font-size: 14px;">
+                                DESCUENTOS AL TRABAJADOR
+                            </div>
+
+
+                        <div class="table-responsive">
+                            <div class="card example-2 square scrollbar-cyan bordered-cyan" style="overflow-x: hidden;">
+                                <table class="table table-bordered" style="border: 1px solid #dbdde0;">
+                                    <thead style="background: #ebeff5;">
+                                        <tr>
+                                            <!-- <th class="text-center">Agrupador Concepto Plame</th> -->
+                                            <th class="text-left">Concepto Plame</th>
+                                            <th class="text-center">Flg</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr style="font-size: 12px">
+                                            <!-- <td style="padding-top: 15px">{{vplame6.conceptoPlame.agrupConcepPlame.descripcion}}</td> -->
+                                            <td>Descripción</td>
+                                            <td class="text-center">
+                                                <input class="form-check-input" type="checkbox" 
+                                                    name="checkVisible6"  required>
+                                                <label class="form-check-label" ></label>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+            
+
+
+                            <div style="font-size: 14px;">
+                                CONCEPTOS VARIOS 
+                            </div>
+
+                        <div class="table-responsive">
+                            <div class="card example-2 square scrollbar-cyan bordered-cyan" style="overflow-x: hidden;">
+                                <table class="table table-bordered" style="border: 1px solid #dbdde0;">
+                                    <thead style="background: #ebeff5;">
+                                        <tr>
+                                           <!--  <th class="text-center">Agrupador Concepto Plame</th> -->
+                                            <th class="text-left">Concepto Plame</th>
+                                            <th class="text-center">Flg</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr style="font-size: 12px">
+                                            <!-- <td style="padding-top: 15px">{{vplame7.conceptoPlame.agrupConcepPlame.descripcion}}</td> -->
+                                            <td>Descripción</td>
+                                            <td class="text-center">
+                                                <input class="form-check-input" type="checkbox"
+                                                    name="checkVisible7"  required>
+                                                <label class="form-check-label"></label>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+            
+
+
+                            <div style="font-size: 14px;">
+                                OTROS CONCEPTOS
+                            </div>
+
+                        <div class="table-responsive">
+                            <div class="card example-2 square scrollbar-cyan bordered-cyan" style="overflow-x: hidden;">
+                                <table class="table table-bordered" style="border: 1px solid #dbdde0;">
+                                    <thead style="background: #ebeff5;">
+                                        <tr>
+                                            <!-- <th class="text-center">Agrupador Concepto Plame</th> -->
+                                            <th class="text-left">Concepto Plame</th>
+                                            <th class="text-center">Flg</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr style="font-size: 12px">
+                                           <!--  <td style="padding-top: 15px">{{vplame8.conceptoPlame.agrupConcepPlame.descripcion}}</td> -->
+                                            <td>Descripción</td>
+                                            <td class="text-center">
+                                                <input class="form-check-input" type="checkbox" 
+                                                    name="checkVisible8" required>
+                                                <label class="form-check-label"></label>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger light" data-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary light">Continuar</button>
+            </div>
+        </div>
+    </div> 
 </div>

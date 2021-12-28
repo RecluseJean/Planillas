@@ -6,6 +6,8 @@ import { SignInComponent } from './pages/sign-in/sign-in.component';
 const routes: Routes = [  
 
   { path: 'signin', component: SignInComponent },   
+  { path: 'password', component: SignInComponent },   
+
   { path: '', redirectTo: 'signin', pathMatch: 'full' },  
 
 
@@ -13,6 +15,8 @@ const routes: Routes = [
     path: '',
     loadChildren: () => import ('./pages/dashboard/dashboard.module').then(module =>module.DashboardModule)
   }
+
+
 
 ]; 
 

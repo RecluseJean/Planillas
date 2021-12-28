@@ -10,10 +10,12 @@ import { ComponentsModule } from './pages/components/components.module';
 import { SignInModule } from './pages/sign-in/sign-in.module';
 //Dashboard
 import { DashboardModule } from './pages/dashboard/dashboard.module';
+import { PasswordComponent } from './pages/password/password.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    PasswordComponent,
        
   ],
   imports: [

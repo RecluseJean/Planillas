@@ -15,7 +15,7 @@
             <div class="card-body">
                 <ul class="nav nav-pills mb-4">
                     <li class="nav-item mr-auto">
-                        <button type="button" class="btn btn-rounded btn-success" style="font-size: 13px;"><span
+                        <button data-toggle="modal" data-target="#nh" type="button" class="btn btn-rounded btn-success" style="font-size: 13px;"><span
                             class="btn-icon-left text-success"><i class="fa fa-plus" style="font-size: 20px;"></i>
                         </span> Nuevo Horario</button>
                     </li>
@@ -57,7 +57,7 @@
                                 </td>
                                 <td>
                                     <div class="d-flex">
-                                        <a href="#" ><i class="fa fa-pencil-square-o" style="font-size: 25px; color: #0B2A97; margin-left: 100%;"></i></a>
+                                        <a data-toggle="modal" data-target="#anh" style="cursor: pointer;" ><i class="fa fa-pencil-square-o" style="font-size: 25px; color: #0B2A97; margin-left: 100%;"></i></a>
                                     </div>
                                 </td>
                                 <td>
@@ -89,6 +89,256 @@
                     </li>
                 </ul>
             </nav>
+        </div>
+    </div>
+
+    <div class="modal fade" id="nh">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Nuevo Horario</h5>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="custom-tab-1">
+                        <ul class="nav nav-tabs">
+                            <li class="nav-item">
+                                <a class="nav-link active" data-toggle="tab" href="#General">General</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#Horario1">Horario Día</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#Horario2">Horario Almuerzo</a>
+                            </li>                           
+                        </ul>
+                        <div class="tab-content">                            
+                            <div class="tab-pane fade show active" id="General">
+                                <div class="pt-4">
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                            <label>Descripción:</label>
+                                            <input type="text" class="form-control">    
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label>Estado:</label>
+                                            <select class="form-control">
+                                                <option value="">estado 1</option>
+                                                <option value="">estado 2</option>
+                                            </select>                                        
+                                        </div>
+                                        <div class="form-group col-md-12 mt-2">
+                                            <span class="badge badge-info light col-md-12">Seleccione los días para este horario</span>                                    
+                                        </div> 
+                                        <div class="col-sm-4 col-6  mt-2">
+                                            <div class="custom-control custom-checkbox mb-3 checkbox-success">
+                                                <input type="checkbox" class="custom-control-input" id="customCheckBox1">
+                                                <label class="custom-control-label" for="customCheckBox1">Lunes</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4 col-6 mt-2">
+                                            <div class="custom-control custom-checkbox mb-3 checkbox-success">
+                                                <input type="checkbox" class="custom-control-input" id="customCheckBox2">
+                                                <label class="custom-control-label" for="customCheckBox2">Martes</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4 col-6 mt-2">
+                                            <div class="custom-control custom-checkbox mb-3 checkbox-success">
+                                                <input type="checkbox" class="custom-control-input" id="customCheckBox3">
+                                                <label class="custom-control-label" for="customCheckBox3">Miércoles</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4 col-6 mt-2">
+                                            <div class="custom-control custom-checkbox mb-3 checkbox-success">
+                                                <input type="checkbox" class="custom-control-input" id="customCheckBox4">
+                                                <label class="custom-control-label" for="customCheckBox4">Jueves</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4 col-6 mt-2">
+                                            <div class="custom-control custom-checkbox mb-3 checkbox-success">
+                                                <input type="checkbox" class="custom-control-input" id="customCheckBox5">
+                                                <label class="custom-control-label" for="customCheckBox5">Viernes</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4 col-6 mt-2">
+                                            <div class="custom-control custom-checkbox mb-3 checkbox-success">
+                                                <input type="checkbox" class="custom-control-input" id="customCheckBox6">
+                                                <label class="custom-control-label" for="customCheckBox6">Sábado</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4 col-6 mt-2">
+                                            <div class="custom-control custom-checkbox mb-3 checkbox-success">
+                                                <input type="checkbox" class="custom-control-input" id="customCheckBox7">
+                                                <label class="custom-control-label" for="customCheckBox7">Domingo</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="Horario1">
+                                <div class="pt-4">
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                            <label>Hora Inicio:</label>
+                                            <input type="time" class="form-control">    
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label>Horario Fin:</label>
+                                            <input type="time" class="form-control">    
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="Horario2">
+                                <div class="pt-4">
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                            <label>Hora Inicio:</label>
+                                            <input type="time" class="form-control">    
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label>Horario Fin:</label>
+                                            <input type="time" class="form-control">    
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                        
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger light" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary">Continuar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="anh">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Actualizar Horario</h5>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="custom-tab-1">
+                        <ul class="nav nav-tabs">
+                            <li class="nav-item">
+                                <a class="nav-link active" data-toggle="tab" href="#General1">General</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#Horario11">Horario Día</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-toggle="tab" href="#Horario22">Horario Almuerzo</a>
+                            </li>                           
+                        </ul>
+                        <div class="tab-content">                            
+                            <div class="tab-pane fade show active" id="General1">
+                                <div class="pt-4">
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                            <label>Descripción:</label>
+                                            <input type="text" class="form-control">    
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label>Estado:</label>
+                                            <select class="form-control">
+                                                <option value="">estado 1</option>
+                                                <option value="">estado 2</option>
+                                            </select>                                        
+                                        </div>
+                                        <div class="form-group col-md-12 mt-2">
+                                            <span class="badge badge-info light col-md-12">Seleccione los días para este horario</span>                                    
+                                        </div> 
+                                        <div class="col-sm-4 col-6  mt-2">
+                                            <div class="custom-control custom-checkbox mb-3 checkbox-success">
+                                                <input type="checkbox" class="custom-control-input" id="customCheckBox8">
+                                                <label class="custom-control-label" for="customCheckBox8">Lunes</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4 col-6 mt-2">
+                                            <div class="custom-control custom-checkbox mb-3 checkbox-success">
+                                                <input type="checkbox" class="custom-control-input" id="customCheckBox9">
+                                                <label class="custom-control-label" for="customCheckBox9">Martes</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4 col-6 mt-2">
+                                            <div class="custom-control custom-checkbox mb-3 checkbox-success">
+                                                <input type="checkbox" class="custom-control-input" id="customCheckBox10">
+                                                <label class="custom-control-label" for="customCheckBox10">Miércoles</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4 col-6 mt-2">
+                                            <div class="custom-control custom-checkbox mb-3 checkbox-success">
+                                                <input type="checkbox" class="custom-control-input" id="customCheckBox11">
+                                                <label class="custom-control-label" for="customCheckBox11">Jueves</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4 col-6 mt-2">
+                                            <div class="custom-control custom-checkbox mb-3 checkbox-success">
+                                                <input type="checkbox" class="custom-control-input" id="customCheckBox12">
+                                                <label class="custom-control-label" for="customCheckBox12">Viernes</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4 col-6 mt-2">
+                                            <div class="custom-control custom-checkbox mb-3 checkbox-success">
+                                                <input type="checkbox" class="custom-control-input" id="customCheckBox13">
+                                                <label class="custom-control-label" for="customCheckBox13">Sábado</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4 col-6 mt-2">
+                                            <div class="custom-control custom-checkbox mb-3 checkbox-success">
+                                                <input type="checkbox" class="custom-control-input" id="customCheckBox14">
+                                                <label class="custom-control-label" for="customCheckBox14">Domingo</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="Horario11">
+                                <div class="pt-4">
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                            <label>Hora Inicio:</label>
+                                            <input type="time" class="form-control">    
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label>Horario Fin:</label>
+                                            <input type="time" class="form-control">    
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="Horario22">
+                                <div class="pt-4">
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                            <label>Hora Inicio:</label>
+                                            <input type="time" class="form-control">    
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label>Horario Fin:</label>
+                                            <input type="time" class="form-control">    
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                        
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger light" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary">Continuar</button>
+                </div>
+            </div>
         </div>
     </div>
 </div>

@@ -14,7 +14,7 @@
             <div class="card-body">
                 <ul class="nav nav-pills mb-4">
                     <li class="nav-item mr-auto">
-                        <button type="button" class="btn btn-rounded btn-success" style="font-size: 13px;"><span
+                        <button data-toggle="modal" data-target="#rcc1" type="button" class="btn btn-rounded btn-success" style="font-size: 13px;"><span
                             class="btn-icon-left text-success"><i class="fa fa-plus" style="font-size: 20px;"></i>
                         </span> Nuevo Centro de Costos</button>
                     </li>
@@ -44,57 +44,15 @@
                                 </td>
                                 <td>
                                     <div class="d-flex">
-                                        <a href="#" ><i class="fa fa-pencil-square-o" style="font-size: 25px; color: #0B2A97; margin-left: 100%;"></i></a>
+                                        <a data-toggle="modal" data-target="#rcc2" style="cursor: pointer;" ><i class="fa fa-pencil-square-o" style="font-size: 25px; color: #0B2A97; margin-left: 100%;"></i></a>
                                     </div>
                                 </td>
                                 <td>
                                     <div class="d-flex">
-                                        <a href="#" ><i class="fa fa-trash" style="font-size: 25px; color: #0B2A97; margin-left: 100%;"></i></a>
+                                        <a data-toggle="modal" data-target="#rcce" style="cursor: pointer;" ><i class="fa fa-trash" style="font-size: 25px; color: #0B2A97; margin-left: 100%;"></i></a>
                                     </div>
                                 </td>
-                            </tr>
-                            <tr>
-                                <td>Centro de Costos 2
-                                </td>
-                                <td>
-                                    <div class="d-flex">
-                                        <a href="#" ><i class="fa fa-pencil-square-o" style="font-size: 25px; color: #0B2A97; margin-left: 100%;"></i></a>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="d-flex">
-                                        <a href="#" ><i class="fa fa-trash" style="font-size: 25px; color: #0B2A97; margin-left: 100%;"></i></a>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Centro de Costos 3
-                                </td>
-                                <td>
-                                    <div class="d-flex">
-                                        <a href="#" ><i class="fa fa-pencil-square-o" style="font-size: 25px; color: #0B2A97; margin-left: 100%;"></i></a>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="d-flex">
-                                        <a href="#" ><i class="fa fa-trash" style="font-size: 25px; color: #0B2A97; margin-left: 100%;"></i></a>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Centro de Costos 4
-                                </td>
-                                <td>
-                                    <div class="d-flex">
-                                        <a href="#" ><i class="fa fa-pencil-square-o" style="font-size: 25px; color: #0B2A97; margin-left: 100%;"></i></a>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="d-flex">
-                                        <a href="#" ><i class="fa fa-trash" style="font-size: 25px; color: #0B2A97; margin-left: 100%;"></i></a>
-                                    </div>
-                                </td>
-                            </tr>
+                            </tr>                            
                         </tbody>
                     </table>
                 </div>
@@ -120,4 +78,68 @@
             </nav>
         </div>
     </div>
+
+    <div class="modal fade" id="rcc1">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Registrar Centro Costos</h5>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group col-md-12">
+                        <label>Nombre Centro Costos:</label>
+                        <input type="text" class="form-control">    
+                    </div>                        
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger light" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary light" data-dismiss="modal">Continuar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="rcc2">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Actualizar Centro Costos</h5>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group col-md-12">
+                        <label>Nombre Centro Costos:</label>
+                        <input type="text" class="form-control">    
+                    </div>                        
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger light" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary light" data-dismiss="modal">Continuar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="rcce">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Mensaje Confirmación</h5>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    ¿Desea eliminar el Centro Costos?                     
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-info light" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-danger light" data-dismiss="modal">Eliminar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>

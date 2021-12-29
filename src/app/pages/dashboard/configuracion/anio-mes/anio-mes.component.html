@@ -13,7 +13,7 @@
             <div class="card-body">
                 <ul class="nav nav-pills mb-4">
                     <li class="nav-item mr-auto">
-                        <button type="button" class="btn btn-rounded btn-success" style="font-size: 13px;"><span
+                        <button data-toggle="modal" data-target="#ram" type="button" class="btn btn-rounded btn-success" style="font-size: 13px;"><span
                             class="btn-icon-left text-success"><i class="fa fa-plus" style="font-size: 20px;"></i>
                         </span> Nuevo Año</button>
                     </li>
@@ -47,63 +47,16 @@
                                 <td>1</td>
                                 <td>
                                     <div class="d-flex">
-                                        <a href="#" ><i class="fa fa-calendar-plus-o" style="font-size: 25px; color: #0B2A97; margin-left: 100%;"></i></a>
+                                        <a data-toggle="modal" data-target="#ramf" style="cursor: pointer;"><i class="fa fa-calendar-plus-o" style="font-size: 25px; color: #0B2A97; margin-left: 100%;"></i></a>
                                     </div>
                                 </td>
                                 <td>
                                     <div class="d-flex">
-                                        <a href="#" ><i class="fa fa-pencil-square-o" style="font-size: 25px; color: #0B2A97; margin-left: 100%;"></i></a>
+                                        <a data-toggle="modal" data-target="#rama" style="cursor: pointer;" ><i class="fa fa-pencil-square-o" style="font-size: 25px; color: #0B2A97; margin-left: 100%;"></i></a>
                                     </div>
                                 </td>
                             </tr>
-                            <tr>
-                                <td>Febrero
-                                </td>
-                                <td>FEB</td>
-                                <td>0</td>
-                                <td>
-                                    <div class="d-flex">
-                                        <a href="#" ><i class="fa fa-calendar-plus-o" style="font-size: 25px; color: #0B2A97; margin-left: 100%;"></i></a>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="d-flex">
-                                        <a href="#" ><i class="fa fa-pencil-square-o" style="font-size: 25px; color: #0B2A97; margin-left: 100%;"></i></a>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Marzo
-                                </td>
-                                <td>MAR</td>
-                                <td>1</td>
-                                <td>
-                                    <div class="d-flex">
-                                        <a href="#" ><i class="fa fa-calendar-plus-o" style="font-size: 25px; color: #0B2A97; margin-left: 100%;"></i></a>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="d-flex">
-                                        <a href="#" ><i class="fa fa-pencil-square-o" style="font-size: 25px; color: #0B2A97; margin-left: 100%;"></i></a>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>ABRIL
-                                </td>
-                                <td>ABR</td>
-                                <td>0</td>
-                                <td>
-                                    <div class="d-flex">
-                                        <a href="#" ><i class="fa fa-calendar-plus-o" style="font-size: 25px; color: #0B2A97; margin-left: 100%;"></i></a>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="d-flex">
-                                        <a href="#" ><i class="fa fa-pencil-square-o" style="font-size: 25px; color: #0B2A97; margin-left: 100%;"></i></a>
-                                    </div>
-                                </td>
-                            </tr>
+                           
                         </tbody>
                     </table>
                 </div>
@@ -127,6 +80,122 @@
                     </li>
                 </ul>
             </nav>
+        </div>
+    </div>
+
+    
+    <div class="modal fade" id="ram">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Registrar Año</h5>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group col-md-12">
+                        <label>Nombre Año:</label>
+                        <input type="text" class="form-control">    
+                    </div>                        
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger light" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary light">Continuar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="ramf">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Días feriados de MES</h5>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label>Día:</label>
+                            <input type="text" class="form-control">    
+                        </div>   
+                        <div class="form-group col-md-6">
+                            <label>Nuevo:</label>
+                            <div class="form-group col-md-12">
+                                <button type="button" class="btn btn-primary light" >Registrar</button>
+                            </div>
+                        </div>  
+                        <div class="form-group col-md-12">
+                            <span class="badge badge-primary light col-md-12">¡Maximo de días feriados registrados alcanzado¡</span>
+                        </div> 
+                        <div class="form-group col-md-12">
+                            <hr>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table header-border table-responsive-sm">
+                                <thead>
+                                    <tr>
+                                        <th>Día del mes</th>
+                                        <th>Eliminar</th>                                     
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            Enero
+                                        </td>
+                                        <td>
+                                            <div class="d-flex">
+                                                <a href="#" class="btn btn-danger shadow btn-xs sharp"><i class="fa fa-trash"></i></a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                                        
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger light" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary light" >Continuar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="modal fade" id="rama">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Actualizar Mes</h5>
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label>Mes:</label>
+                            <input type="text" class="form-control">    
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label>Abreviatura:</label>
+                            <input type="text" class="form-control">    
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label>Días feriados:</label>
+                            <input type="text" class="form-control">    
+                        </div>
+                    </div>                     
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger light" data-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary light" >Continuar</button>
+                </div>
+            </div>
         </div>
     </div>
 </div>
